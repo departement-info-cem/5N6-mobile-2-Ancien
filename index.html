@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Applications mobiles avancées</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style> body { padding-top: 70px;}</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-dark" >
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">Mobile avancé</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="dropdown ml-1">
+                            <button class="btn dropdown-toggle btn-outline-light"
+                                    type="button" id="dropdownPatient" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                projet
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPatient">
+                                <a class="dropdown-item" href="phase1.html" >phase 1</a>
+                                <a class="dropdown-item" href="phase2.html" >phase 2</a>
+                                <a class="dropdown-item" href="phase3.html" >phase 3</a>
+                                <a class="dropdown-item" href="phase4.html" >phase 4</a>
+                            </div>
+                        </li>
+                        <li class="dropdown ml-1">
+                            <button class="btn dropdown-toggle btn-outline-success"
+                                    type="button" id="dropdownVid" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="label label-primary">videos</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownVid">
+                                <a class="dropdown-item" href="https://www.youtube.com/channel/UCOH9PMOL-wGH29SYcNFlfbQ">Chaine Youtube</a>
+                                <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLYHAgLf_cnWQccEbrvVCJksLSfc5f0nR_">Liste de lecture Java</a>
+                            </div>
+                        </li>
+                        <li class="dropdown ml-1">
+                            <button class="btn dropdown-toggle btn-outline-info"
+                                    type="button" id="dropdownSoft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="label label-primary">outils</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSoft">
+                                <a class="dropdown-item" target="_blank" href="solutions.html">Problèmes courants et solutions</a>
+                                <a class="dropdown-item" target="_blank" href="https://aws.amazon.com/fr/corretto/">Amazon Corretto (OpenJDK)</a>
+                                <a class="dropdown-item" target="_blank" href="https://www.jetbrains.com/fr-fr/idea/">Intellij IDEA</a>
+                                <a class="dropdown-item" target="_blank" href="https://www.jetbrains.com/student/">Jetbrains pour étudiant</a>
+                                <a class="dropdown-item" target="_blank" href="https://developer.android.com/studio">Android Studio</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md border border-danger">
+                    <strong>Plagiat</strong>
+                    <p>
+                        Les exercices peuvent être réalisés à plusieurs. Par contre, tous les travaux <strong>évalués</strong> sont <span class="badge badge-danger">INDIVIDUELS</span>.
+                    </p>
+                    <p>
+                        Lis les règles concernant le plagiat et les sanctions 
+                        <a class="btn btn-block btn-danger" href="https://departement-info-cem.github.io/plagiat.html">ICI</a>
+                    </p>
+                </div>
+                <div class="col-md">
+                    <strong>Déroulement d'une semaine type</strong>
+                    <p>
+                        Tu as du travail préparatoire pour découvrir la matière par toi-même (page web à lire, video, exercices) pour environ 2 heures de travail.
+                    </p>
+                    <p>
+                        Pendant la séance, tu dois compléter et valider tes exercices, poser des questions et compléter ton TP.
+                    </p>
+                </div>
+                <div class="col-md">
+                    <strong>Installation à la maison</strong>
+                    <p>
+                        À la maison, vous devez installer
+                        <a target="_blank" class="badge badge-primary" href="https://aws.amazon.com/fr/corretto/">JDK</a> et l'environnement de développement
+                        <a target="_blank" class="badge badge-primary" href="https://www.jetbrains.com/fr-fr/idea/">Intellij IDEA</a>
+                    </p>
+                    <p>
+                        Pendant la 2ème moitié du cours en Android, vous aurez besoin de 
+                        <a target="_blank" class="badge badge-primary" href="https://developer.android.com/studio">Android Studio</a>.
+                    </p>
+                    <p>
+                        Flutter et dart
+                        <a target="_blank" class="badge badge-primary" href="https://developer.android.com/studio">Android Studio</a>.
+                    </p>
+                    <p>
+                        Problèmes courants et solutions <a class="badge badge-warning" target="_blank" href="solutions.html">ICI</a>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <strong>Séance par séance</strong>
+                    <table class="table table-sm table-striped table-hover">
+                        <tr>
+
+                            <td><a class="btn btn-secondary btn-sm" href="accueil.html">  1</a></td>
+                            <td style="width: 50%">Flutter : Intro et mise en page</td>
+                            <td rowspan="5" class="col-md-5 bg-light text-dark border border-primary">
+                                <a class="btn btn-primary btn-sm btn-block" href="phase1.html">
+                                    <i class="fa fa-firefox" aria-hidden="true"></i> 
+                                    Travail 1 : Flutter </a>
+                                <ul>
+                                    <li>Écrans et navigation</li>
+                                    <li>Drawer</li>
+                                    <li>Mise en page</li>
+                                    <li>Communication avec serveur fourni ou hérité du cours d'avant</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-secondary btn-sm" href="accueil.html">  2</a></td>
+                            <td>Flutter : gestion des listes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="imperatif.html">  3</a>
+                            </td>
+                            <td>Flutter : accès réseau et JSON</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="imperatif.html">  4</a>
+                            </td>
+                            <td>Flutter : intégration</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="imperatif.html">  5</a>
+                            </td>
+                            <td>Flutter : authentification et token / IOS</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="librairies.html">  6</a>
+                            </td>
+                            <td>Déploiement : création de comptes développeurs</td>
+                            <td rowspan="5" class="bg-primary text-light border border-primary">
+                                <a class="btn btn-light btn-sm btn-block" href="phase2.html">
+                                    <i class="fa fa-check"></i>
+                                    Travail 2 : Déploiement
+                                </a>
+                                <ul>
+                                    <li>Client Android déployé sur PlayStore</li>
+                                    <li>Serveur déployé et fonctionnel au niveau cloud</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="librairies.html">  7</a>
+                            </td>
+                            <td>Déploiement : compilation des client et magasins d'applications</td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="librairies.html">  8</a>
+                            </td>
+                            <td>Déploiement : serveur et API</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="revision.html">  9</a>
+                            </td>
+                            <td>Déploiement : débogage d'un serveur déployé</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-danger btn-sm" href="examen.html">  10</a>
+                            </td>
+                            <td>Déploiement : intégration</td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="application-console.html">  11</a>
+                            </td>
+                            <td>Image : sélection et accès côté client</td>
+                            <td rowspan="5" class="bg-primary text-light border border-primary">
+                                <a class="btn btn-light btn-sm btn-block" href="phase2.html">
+                                    <i class="fa fa-check"></i>
+                                    Travail 3 : Images
+                                </a>
+                                <ul>
+                                    <li>Ajout d'une galerie d'images</li>
+                                    <li>Fonctionnement de l'envoi d'une image</li>
+                                    <li>Serveurs optimisés pour les images d'aperçu</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="application-console.html">  12</a>
+                            </td>
+                            <td>Image : format de transfer et compatibilité HTTP</td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="application-console.html">  13</a>
+                            </td>
+                            <td>Image : stockage serveur, livraison binaire et redimensionnement</td>
+                        </tr>
+                        <tr>
+                            <td><a class="btn btn-secondary btn-sm" href="tests.html"> 14</a></td>
+                            <td>Image : intégration</td>
+                        </tr>
+
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
