@@ -1,77 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
+        <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="page du cours professions informatiques">
-        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Applications mobiles avancées</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style> body { padding-top: 70px;}</style>
+        <title>5N6 - applis mobiles</title>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-dark" >
+    <body style="padding-top: 70px;">
+
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top ">
             <div class="container">
-                <a class="navbar-brand text-light" href="#">Mobile avancé</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">5N6 : applis mobiles 2</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="theCollapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="dropdown ml-1">
-                            <button class="btn dropdown-toggle btn-outline-light"
-                                    type="button" id="dropdownPatient" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                projet
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPatient">
-                                <a class="dropdown-item" href="phase1.html" >phase 1</a>
-                                <a class="dropdown-item" href="phase2.html" >phase 2</a>
-                                <a class="dropdown-item" href="phase3.html" >phase 3</a>
-                                <a class="dropdown-item" href="phase4.html" >phase 4</a>
-                            </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!--
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="dropdown ml-1">
-                            <button class="btn dropdown-toggle btn-outline-success"
-                                    type="button" id="dropdownVid" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="label label-primary">videos</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownVid">
-                                <a class="dropdown-item" href="https://www.youtube.com/channel/UCOH9PMOL-wGH29SYcNFlfbQ">Chaine Youtube</a>
-                                <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PLYHAgLf_cnWQccEbrvVCJksLSfc5f0nR_">Liste de lecture Java</a>
-                            </div>
+-->
+<!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="dropdown ml-1">
-                            <button class="btn dropdown-toggle btn-outline-info"
-                                    type="button" id="dropdownSoft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="label label-primary">outils</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSoft">
-                                <a class="dropdown-item" target="_blank" href="solutions.html">Problèmes courants et solutions</a>
-                                <a class="dropdown-item" target="_blank" href="https://aws.amazon.com/fr/corretto/">Amazon Corretto (OpenJDK)</a>
-                                <a class="dropdown-item" target="_blank" href="https://www.jetbrains.com/fr-fr/idea/">Intellij IDEA</a>
-                                <a class="dropdown-item" target="_blank" href="https://www.jetbrains.com/student/">Jetbrains pour étudiant</a>
-                                <a class="dropdown-item" target="_blank" href="https://developer.android.com/studio">Android Studio</a>
-                            </div>
+-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Travaux
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Travail 1</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Travail 2</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Travail 3</a></li>
+                            </ul>
                         </li>
+<!--
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+-->
                     </ul>
+<!--
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+-->
                 </div>
             </div>
         </nav>
 
+
+
         <div class="container">
-            <div class="row">
-                <div class="col-md border border-danger">
+            <div class="row justify-content-md-center">
+                <div class="col">
                     <strong>Plagiat</strong>
                     <p>
                         Les exercices peuvent être réalisés à plusieurs. Par contre, tous les travaux <strong>évalués</strong> sont <span class="badge badge-danger">INDIVIDUELS</span>.
                     </p>
                     <p>
                         Lis les règles concernant le plagiat et les sanctions 
-                        <a class="btn btn-block btn-danger" href="https://departement-info-cem.github.io/plagiat.html">ICI</a>
+                        <a class="btn btn-sm btn-danger" href="https://departement-info-cem.github.io/plagiat.html">ICI</a>
                     </p>
                 </div>
                 <div class="col-md">
@@ -83,164 +81,182 @@
                         Pendant la séance, tu dois compléter et valider tes exercices, poser des questions et compléter ton TP.
                     </p>
                 </div>
-                <div class="col-md">
+                <div class="col">
                     <strong>Installation à la maison</strong>
+                    <ul>
+                        <li><a target="_blank" href="https://developer.android.com/studio">Android Studio</a></li>
+                        <li><a target="_blank" href="https://flutter.dev">Flutter</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/c/flutterdev/videos">Flutter @ Youtube</a></li>
+                    </ul>
                     <p>
-                        À la maison, vous devez installer
-                        <a target="_blank" class="badge badge-primary" href="https://aws.amazon.com/fr/corretto/">JDK</a> et l'environnement de développement
-                        <a target="_blank" class="badge badge-primary" href="https://www.jetbrains.com/fr-fr/idea/">Intellij IDEA</a>
-                    </p>
-                    <p>
-                        Pendant la 2ème moitié du cours en Android, vous aurez besoin de 
-                        <a target="_blank" class="badge badge-primary" href="https://developer.android.com/studio">Android Studio</a>.
-                    </p>
-                    <p>
-                        Flutter et dart
-                        <a target="_blank" class="badge badge-primary" href="https://developer.android.com/studio">Android Studio</a>.
-                    </p>
-                    <p>
-                        Problèmes courants et solutions <a class="badge badge-warning" target="_blank" href="solutions.html">ICI</a>
+                        Problèmes courants et solutions <a target="_blank" href="solutions.html">ICI</a>
                     </p>
                 </div>
             </div>
 
-
-
-
-
             <div class="row">
-                <div class="col-md-12">
-                    <strong>Séance par séance</strong>
-                    <table class="table table-sm table-striped table-hover">
-                        <tr>
+                <table class="table table-sm">
+                    <tr>
 
-                            <td><a class="btn btn-secondary btn-sm" href="accueil.html">  1</a></td>
-                            <td style="width: 50%">Flutter : Intro et mise en page</td>
-                            <td rowspan="5" class="col-md-5 bg-light text-dark border border-primary">
-                                <a class="btn btn-primary btn-sm btn-block" href="phase1.html">
-                                    <i class="fa fa-firefox" aria-hidden="true"></i> 
-                                    Travail 1 : Flutter </a>
-                                <ul>
-                                    <li>Écrans et navigation</li>
-                                    <li>Drawer</li>
-                                    <li>Mise en page</li>
-                                    <li>Communication avec serveur fourni ou hérité du cours d'avant</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="btn btn-secondary btn-sm" href="accueil.html">  2</a></td>
-                            <td>Flutter : gestion des listes</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="imperatif.html">  3</a>
-                            </td>
-                            <td>Flutter : accès réseau et JSON</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="imperatif.html">  4</a>
-                            </td>
-                            <td>Flutter : intégration</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="imperatif.html">  5</a>
-                            </td>
-                            <td>Flutter : authentification et token / IOS</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="librairies.html">  6</a>
-                            </td>
-                            <td>Déploiement : création de comptes développeurs</td>
-                            <td rowspan="5" class="bg-primary text-light border border-primary">
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">1.1</span></a></td>
+                        <td style="width: 50%">Flutter : Intro et mise en page</td>
+                        <td rowspan="8" class="text-light table-dark">
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-light btn-sm" href="phase1.html">
+                                    Travail 1 : Flutter 
+                                </a>
+                            </div>
+                            <ul>
+                                <li>Écrans et navigation</li>
+                                <li>Drawer</li>
+                                <li>Mise en page</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">1.2</span> </a>
+                        </td>
+                        <td>Flutter : gestion des listes</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">2.1</span></a></td>
+                        <td>Flutter : gestion des listes</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">2.2</span></a></td>
+                        <td>Flutter : gestion des listes</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">3.1</span></a></td>
+                        <td>Flutter : accès réseau et JSON</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">3.2</span></a></td>
+                        <td>Flutter : accès réseau et JSON</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">4.1</span></a></td>
+                        <td>Flutter : intégration</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">4.2</span></a></td>
+                        <td>Flutter : intégration</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">5.1</span></a></td>
+                        <td>Flutter : authentification et token / IOS</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">5.2</span></a></td>
+                        <td>Flutter : authentification et token / IOS</td>
+                        <td rowspan="8" class="text-light table-dark">
+                            <div class="d-grid gap-2">
                                 <a class="btn btn-light btn-sm btn-block" href="phase2.html">
-                                    <i class="fa fa-check"></i>
                                     Travail 2 : Déploiement
                                 </a>
-                                <ul>
-                                    <li>Client Android déployé sur PlayStore</li>
-                                    <li>Serveur déployé et fonctionnel au niveau cloud</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
+                            </div>
+                            <ul>
+                                <li>Classes de transfert et communication réseau</li>
+                                <li>Stockage actif Firebase</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">6.1</span></a></td>
+                        <td>Flutter : authentification et token / IOS</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">6.2</span></a></td>
+                        <td>Déploiement : création de comptes développeurs</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">7.1</span></a></td>
+                        <td>Déploiement : compilation des client et magasins d'applications</td>    
+                    </tr>
 
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="librairies.html">  7</a>
-                            </td>
-                            <td>Déploiement : compilation des client et magasins d'applications</td>    
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="librairies.html">  8</a>
-                            </td>
-                            <td>Déploiement : serveur et API</td>
+                    <tr class="table-danger">
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-danger">7.2</span></a></td>
+                        <td>Examen Intra</td>    
+                    </tr>
+                    <tr>
 
-                        </tr>
-                        <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">8.1</span></a></td>
+                        <td>Déploiement : compilation des client et magasins d'applications</td>    
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">8.2</span></a></td>
+                        <td>Déploiement : serveur et API</td>
 
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="revision.html">  9</a>
-                            </td>
-                            <td>Déploiement : débogage d'un serveur déployé</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">9.1</span></a></td>   
+                        <td>Déploiement : débogage d'un serveur déployé</td>
 
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-danger btn-sm" href="examen.html">  10</a>
-                            </td>
-                            <td>Déploiement : intégration</td>
-                        </tr>
-                        <tr>
-
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="application-console.html">  11</a>
-                            </td>
-                            <td>Image : sélection et accès côté client</td>
-                            <td rowspan="5" class="bg-primary text-light border border-primary">
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">9.2</span></a></td>
+                        <td>Déploiement : débogage d'un serveur déployé</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">10.1</span></a></td>
+                        <td>Déploiement : intégration</td>
+                        <td rowspan="8" class="text-light table-dark">
+                            <div class="d-grid gap-2">
                                 <a class="btn btn-light btn-sm btn-block" href="phase2.html">
                                     <i class="fa fa-check"></i>
                                     Travail 3 : Images
                                 </a>
-                                <ul>
-                                    <li>Ajout d'une galerie d'images</li>
-                                    <li>Fonctionnement de l'envoi d'une image</li>
-                                    <li>Serveurs optimisés pour les images d'aperçu</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="application-console.html">  12</a>
-                            </td>
-                            <td>Image : format de transfer et compatibilité HTTP</td>
-                        </tr>
-                        <tr>
+                            </div>
+                            <ul>
+                                <li>Ajout d'une galerie d'images</li>
+                                <li>Fonctionnement de l'envoi d'une image</li>
+                                <li>Serveurs optimisés pour les images d'aperçu</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">10.2</span></a></td>
+                        <td>Déploiement : intégration</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">11.1</span></a></td>
+                        <td>Image : sélection et accès côté client</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">12.1</span></a></td>
+                        <td>Image : format de transfer et compatibilité HTTP</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">12.2</span></a></td>
+                        <td>Image : redimension client upload, serveur download</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">13.1</span></a></td>
+                        <td>Image : stockage, livraison binaire, dimensions</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">13.2</span></a></td>
+                        <td>Image : stockage serveur, livraison binaire et redimensionnement</td>
+                    </tr>
+                    <tr>
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-dark">14.1</span></a></td>
+                        <td>Image : stockage serveur, livraison binaire et redimensionnement</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td><a href="imperatif.html"><span class="badge rounded-pill bg-danger">14.2</span></a></td>
+                        <td>Examen Final</td>
+                    </tr>
 
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="application-console.html">  13</a>
-                            </td>
-                            <td>Image : stockage serveur, livraison binaire et redimensionnement</td>
-                        </tr>
-                        <tr>
-                            <td><a class="btn btn-secondary btn-sm" href="tests.html"> 14</a></td>
-                            <td>Image : intégration</td>
-                        </tr>
 
 
 
-
-                    </table>
-                </div>
+                </table>
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
-
 </html>
+
