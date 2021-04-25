@@ -7,7 +7,7 @@
         <meta name="description" content="page du cours professions informatiques">
         <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-        <title>Projet phase 1</title>
+        <title>Travail 1 : flutter</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Mobile : <strong>Projet phase 1</strong></a>
+                    <a class="navbar-brand" href="index.html">Mobile : <strong>Travail 1</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -44,178 +44,146 @@
 
             <div class="row well">
                 <div class="">
-                    <strong id="s1">But du projet</strong>
                     <div class="col-xs-4 alert">
-                        <strong>Votre application Android</strong>
+                        <strong>Serveur fourni</strong>
                         <p>
-                            Vous allez mettre en place votre propre application Android.
+                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Server">Le serveur</a>
+                            écrit en Spring Boot est fourni.
+                        </p>
+                        <p>
+                            Vous devrez mettre en place des classes de transfert en Dart en cous inspirant des classes de transfert utilisées dans le projet serveur : 
+                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Library">DTO en java</a>.
                         </p>
 
                     </div>
                     <div class="col-xs-4 alert ">
-                        <strong>Interface graphique</strong>
+                        <strong>Contenu du TP</strong>
                         <ul>
-                            <li>Définir les activités de votre application</li>
-                            <li>Mise en page</li>
-                            <li>Navigation avec Drawer/Tiroir</li>
+                            <li>Interface graphique en flutter</li>
+                            <li>Accès réseau avec la librairie dio</li>
                         </ul>
                     </div>
                     <div class="col-xs-4 alert ">
-                        <strong>Interface réseau</strong>
-                        <ul>
-                            <li>Classes de transfert</li>
-                            <li>Service retrofit</li>
-                            <li>Fournir une implémentation mock de ce service</li>
-                        </ul>
+                        <strong>Repository Git</strong>
+                        <div>
+                            <span class="label label-success">1 point</span> Le nom du repo privé est <em>A21-4205N6-KickMyFlutter-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions : <b><a href="https://departement-info-cem.github.io/git">ici</a></b> & <b><a href="introduction.html">ici</a></b> ) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+                        </div>
+                        <div>
+                            <span class="label label-success">2 points</span> Un minimum de 5 commits de tailles comparables. Au moins un commit par semaine de cours. De plus, il n'y a pas un commit avec tout dedans et les autres vides. Les commits décrivent l'avancement du projet dans un français correct (passe Word).
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-xs-4 alert ">
+                            <strong>
+                                <span class="label label-success">2 points</span>
+                                Activité d'inscription
+                            </strong>
+                            <p>
+                                Activité d'inscription permet à l'utilisateur de créer un compte.
+                            </p>
+                            <ul>
+                                <li>Un champ pour le nom de l'utilisateur</li>
+                                <li>Un champ pour le mot de passe qui est caché (.....)</li>
+                                <li>Un champ pour la confirmation du mot de passe qui est caché (.....)</li>
+                                <li>Un bouton inscription qui mène à l'activité principale (un utilisateur qui crée un compte est automatiquement connecté)</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-4 alert ">
+                            <strong>
+                                <span class="label label-success">2 points</span>
+                                Activité de connexion
+                            </strong>
+                            <p>
+                                L'application doit démarrer sur une activité connexion.
+                            </p>
+                            <ul>
+                                <li>Un champ pour le nom de l'utilisateur</li>
+                                <li>Un champ pour le mot de passe qui est caché (.....)</li>
+                                <li>Un bouton de connexion qui amène à l'activité d'accueil</li>
+                                <li>Un bouton inscription qui mène à l'activité d'inscription</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-4 alert ">
+                            <strong>
+                                Activité d'accueil
+                            </strong>
+                            <p>
+                                L'activité d'accueil affiche la liste des tâches de l'utilisateur.
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">1 point</span> Il faut une option / menu / bouton qui mène à l'activité de création d'une tâche</li>
+                                <li><span class="label label-success">1 point</span> Un appui sur un item de la liste mène à l'activité de consultation</li>
+                                <li><span class="label label-success">3 points</span> Une liste en mode recyclerView.</li>
+                                <li>
+                                    Pour chaque élément d'information, vous pouvez choisir d'afficher du texte et/ou un élément graphique. Vous devez faire preuve d'imagination pour l'affichage.</li>
+                            </ul>
+                            Chaque item de la liste contient:
+                            <ul>
+                                <li>Le nom de la tâche</li>
+                                <li>Son pourcentage d'avancement de la tâche (ex: 30%)</li>
+                                <li>Le temps écoulé depuis la création de la tâche (ex: 3 jours / 7)</li>
+                                <li>La date limite</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-4 alert ">
+                            <strong>
+                                <span class="label label-success">2 points</span>
+                                Activité de création
+                            </strong>
+                            <p>
+                                L'activité de création permet de créer une tâche qui s'ajoutera dans la liste des tâches de l'utilisateur.
+                            </p>
+                            <ul>
+                                <li>Un champ nom pour le nom de la tâche</li>
+                                <li>Un moyen d'entrer la date d'échéance de la tâche</li>
+                                <li>Un bouton d'ajout qui mène à l'activité d'accueil</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-xs-4 alert ">
+                            <strong>
+                                Activité de consultation
+                            </strong>
+                            <p>
+                                L'activité de consultation permet de voir le nom et la date de la tâche. Elle permet de changer le pourcentage d'avancement.
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">1 point</span> Présence des éléments suivants
+                                    <ul>
+                                        <li>On voit le nom et la date d'échéance de la tâche</li>
+                                        <li>On voit le pourcentage d'avancement</li>
+                                        <li>On voit le temps écoulé depuis la création de la tâche</li>
+                                    </ul>
+                                <li><span class="label label-success">2 points</span> Il y a un moyen pour modifier le pourcentage d'avancement</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-4 alert ">
+                            <strong>
+                                Tiroir de navigation
+                            </strong>
+                            <p>
+                                Il permet d'accéder rapidement à toutes les activités principales:
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">1 point</span> Le tiroir est <u>présent</u> dans toutes les activités <strong>SAUF</strong> inscription et connexion.</li>
+                                On a le nom de l'utilisateur courant affiché.<br/>
+                                Il y a les options Accueil, Ajout de tâche et Déconnexion.
+                                <li><span class="label label-success">3 points</span> Le tiroir <u>fonctionne</u> dans toutes les activités <strong>SAUF</strong> inscription et connexion.</li>
+                                Accueil amène à l'activité d'Accueil, Ajout de tâche amène à l'activité d'Ajout de tâche et Déconnexion amène à l'activité de Connexion.
+                                <li><span class="label label-success">1 point</span> Il y a le hamburger dans l'ActionBar qui déclenche le tiroir</li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row ">
-                <div class="col-xs-6 alert ">
-                    <strong>
-                        <span class="label label-success">4 points</span>
-                        Activités et mise en page
-                    </strong>
-                    <p>
-                        Vous devez programmer les activités suivantes au minimum:
-                    </p>
-                    <ul>
-                        <li>Écran de connexion et inscription</li>
-                        <li>Écran d'accueil et d'affichage de liste <strong>personnalisée</strong></li>
-                        <li>Écran de consultation d'un objet en détail</li>
-                        <li>Interface (activité, dialogue etc.) de création d'objet</li>
-                    </ul>
-                </div>
-
-                <div class="col-xs-6 alert alert-info">
-                    <strong>Pointage</strong>
-                    <ul>
-                        <li><span class="label label-success">4 points</span> 4 activités existent et sont mises en page</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-xs-9 alert">
-                    <strong>
-                        <span class="label label-success">4 points</span>
-                        Service et Retrofit
-                    </strong>
-                    <p>
-                        Vous devez identifier les différentes actions permises par votre service en fonction des
-                        écrans prévus dans votre application. Chaque bouton ou affichage de données
-                        est a priori une méthode de service.
-                    </p>
-                    <p>
-                        Vous devez atteindre le minimum soit la gestion des utilisateurs (création de compte, connexion
-                        et déconnexion) ainsi que la gestion d'une entité de données (création, récupération d'une liste,
-                        récupération du détail d'une entité).
-                    </p>
-                    <p>
-                        Vous devez déterminer toutes les méthodes qui découlent de votre interface graphique. Si le
-                        professeur identifie des méthodes manquantes, des méthodes inutiles ou des doublons, vous perdrez des points.
-                    </p>
-                </div>
-
-                <div class="col-xs-3 alert alert-info">
-                    <strong>Pointage</strong>
-                    <ul>
-                        <li><span class="label label-success">2 points</span> service pour l'identification</li>
-                        <li><span class="label label-success">2 points</span> service pour la gestion de l'entité</li>
-                    </ul>
-                </div>
-            </div>
-                        <div class="row well">
-                <div class="col-xs-9 alert">
-                    <strong>
-                        <span class="label label-success">4 points</span>
-                        Classes de transfert
-                    </strong>
-                    <p>
-                        En identifiant vos classes de services, vous allez définir naturellement des classes de transfert. Pour chacune de ces classes, vous devez identifier les variables membres nécessaires pour transférer les informations utiles.
-                        Vous devez définir au minimum les classes nécessaires pour tranférer les informations concernant:
-                    </p>
-                    <ul>
-                        <li>l'utilisateur (au moins un identifiant et un mot de passe). Vous pouvez avoir plusieurs classes selon l'interaction (connexion, inscription etc.)</li>
-                        <li>l'entité que vous gérez (selon votre application). Les classes de transfert doivent correspondre au besoin d'affichage ou d'envoi d'information.</li>
-                    </ul>
-                    <p>
-                        Vous devez identifier tous les besoins qui découlent de votre interface graphique. Si le
-                        professeur identifie des informations non représentées ou représentées en double ou inutiles pour l'application, vous perdrez des points.
-                    </p>
-                </div>
-
-                <div class="col-xs-3 alert alert-info">
-                    <strong>Pointage</strong>
-                    <ul>
-                        <li><span class="label label-success">2 points</span> classes de transfert pour l'identification </li>
-                        <li><span class="label label-success">2 points</span> classes de transfert pour le reste de l'application </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row well">
-                <div class="col-xs-9 alert">
-                    <strong>
-                        <span class="label label-success">6 points</span>
-                        Mock Retrofit (Prototype fonctionnel sans serveur)
-                    </strong>
-                    <p>
-                        Pour chaque méthode du service retrofit, vous devez fournir une implantation moquée.
-                        Il n'est pas nécessaire que l'information soit cohérente. Les objets retournés doivent
-                        uniquement servir à permettre la démonstration de l'interface. Les méthodes d'identification 
-                        ou de création d'objet peuvent avoir une implémentation moquée qui ne fait rien. 
-                    </p>
-                    <p>
-                        Vous ne devez pas "hardcoder" d'information ailleurs que dans le mock. Chaque endroit dans
-                        le code d'interface qui ne fait pas appel au service (et donc au mock) vous coutera un point.
-                    </p>
-                </div>
-
-                <div class="col-xs-3 alert alert-info">
-                    <strong>Pointage</strong>
-                    <ul>
-                        <li><span class="label label-success">2 points</span> le service moqué est implanté</li>
-                        <li><span class="label label-success">4 points</span> Le service est utilisé partout dans l'interface</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-xs-9 alert">
-                    <strong>
-                        <span class="label label-success">7 points</span>
-                        Navigation entre activités
-                    </strong>
-                    <p>
-                        Vous devez avoir un tiroir de navigation dans toutes les activités appropriées
-                        (cela n'a pas de sens pour l'écran de connexion par exemple). Le tiroir doit donner
-                        accès à tous les éléments de l'interface appropriés
-                        (au minimum, à l'accueil, à la création d'un item et à la déconnexion).
-                    </p>
-                    <p>
-                        Vous devez vous assurer d'avoir le "hamburger" fonctionnel dans tous les activités avec tiroir.
-                    </p>
-                    <p>
-                        Vous devez faire une mise en page personnalisée (qui indique l'identifiant de l'utilisateur) pour
-                        l'en-tête du tiroir (drawer header).
-                    </p>
-                    <p>
-                        Vous devez vous assurer d'implanter les autres possiblités de navigation.
-                        Par exemple, quand un utilisateur se connecte, aller à l'écran d'accueil, quand
-                        l'utilisateur, sélectionne un item dans une liste aller à l'écran de détail, retourner
-                        à la liste après la création d'un objet etc.
-                    </p>
-                </div>
-                <div class="col-xs-3 alert alert-info">
-                    <strong>Pointage</strong>
-                    <ul>
-                        <li><span class="label label-success">3 points</span> le tiroir est fonctionnel dans toutes les activités et donne accès à toute l'interface</li>
-                        <li><span class="label label-success">1 point</span> tiroir : hamburger fonctionnel dans toutes les activités</li>
-                        <li><span class="label label-success">1 point</span> tiroir : drawer header personnalisé</li>
-                        <li><span class="label label-success">2 points</span> toutes autres navigations fonctionnelles</li>
-                    </ul>
-                </div>
-            </div>
         </div>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
