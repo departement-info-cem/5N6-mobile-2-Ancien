@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Programmation mobile</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S4 : <strong>Programmation mobile</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s4">Accès réseau client et JSON</h3>
+                <div class="col-md-6 alert alert-success">
+                    <strong>Avant la séance : théorie (2h)</strong>
+                    <p>
+                        Vous devez regarder les videos suivantes:
+                    </p>
+                    
+                </div>
+                <div class="col-md-6">
+                    
+                    <div class="alert alert-info">
+                        <strong>Séance 1</strong>
+                        <p>
+                            On expliquera comment envoyer une requête HTTP aux web services des exercices et réceptionner le résultat
+                        </p>
+                        <p>
+                            On verra comment mettre en place des points d'arrêt.
+                        </p>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Séance 2</strong>
+                        <p>
+                            On expliquera à quoi servent les différentes classes de transfert dans la librairie 
+                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Library">
+                                librairie de DTO ou classes de transfert
+                            </a>
+                            Et les différentes manières de l'utiliser dans votre projet:
+                        </p>
+                        <ul>
+                            <li>téléchargement et installation locale</li>
+                            <li>fork et installation locale</li>
+                            <li>jitpack et lien vers le repo du cours</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <strong>Exercices de la semaine</strong>
+                        <div >
+                            <h3>Exercice simple</h3>
+                            <p>
+                                Vous trouverez à l'url 
+                                <a href="https://exercices-web.herokuapp.com/exos/long/double/4">
+                                    https://exercices-web.herokuapp.com/exos/long/double/4
+                                </a> un web service qui double la valeur du nombre qu'on lui passe.
+                            </p>
+                            <p>
+                                Tu dois démontrer un appel avec succès à ce web service dans une application Android depuis l'interface graphique. 
+                            </p>
+                            <p>
+                                Par exemple, une activité avec un EditText pour le nombre et un bouton pour déclencher l'appel. Au retour de la valeur (doublée), celle-ci est affichée dans un Toast.
+                            </p>
+                            <h3>Exercice Objet complexe</h3>
+                            <p>
+                                Créez un projet appelé <strong>Complexe</strong>. Le projet doit partir une activité qui doit aller récupérer des données <a class="btn btn-xs btn-primary" href="https://exercices-web.herokuapp.com/exos/truc/complexe?name=whippsie" target="_blank">ici</a> (remplacez whippsie par votre prénom dans l'URL).
+                                Les champs récupérés doivent être affichés dans l'activité principale.
+                            </p>
+                            
+                            
+                            <h3>Exercice Listes</h3>
+                            <p>
+                                Créez un projet appelé <strong>Listes</strong>. Le projet doit partir une activité coupée en 2 dans le sense de la hauteur. Chaque moitié est occupée par un recyclerView qui sera peuplée par des appels suivants:
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="https://exercices-web.herokuapp.com/exos/long/list" target="_blank">
+                                        https://exercices-web.herokuapp.com/exos/long/list
+                                    </a>
+                                    https://exercices-web.herokuapp.com/exos/long/list renvoie une liste de Long, chaque élément dans le recyclerView est un simple champ text où vous affichez la valeur du nombre
+                                </li>
+                                <li>
+                                    <a href="https://exercices-web.herokuapp.com/exos/truc/list" target="_blank">
+                                        https://exercices-web.herokuapp.com/exos/truc/list
+                                    </a>
+                                    renvoie une liste d'objets complexes. Chaque item du recyclerView doit afficher les 2 champs simple ainsi que la taille de la liste
+                                </li>
+                            </ul>
+                            
+                            <h3>Exercice Github API</h3>
+                            <p>
+                                Créez un projet appelé <strong>Repos</strong> dans lequel
+                                vous créerez un service simple en GET sur l'URL
+                                https://api.github.com/users/jorisdeguet/repos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
