@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
 
       // TODO enregistrer les delegate pour la traduction
       localizationsDelegates: [
-        const DemoDelegate(),
+        DemoDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

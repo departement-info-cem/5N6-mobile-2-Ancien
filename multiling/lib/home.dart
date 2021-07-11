@@ -18,6 +18,8 @@ class _DemoMultiLingState extends State<DemoMultiLing> {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Text(
+          // TODO utiliser le code suivant pour avoir la traduction pour
+          // le 'MESSAGE' voir dans le xx.json dans assets/i18n/
           Locs.of(context).trans('MESSAGE'),
         ),
       ),

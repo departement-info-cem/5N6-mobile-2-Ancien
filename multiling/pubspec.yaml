@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
+  flutter_localizations: # TODO ajouter ces 2 lignes
     sdk: flutter
 
   cupertino_icons: ^1.0.2
@@ -23,5 +23,6 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   uses-material-design: true
-  assets: # TODO ajouter les assets dans la declaration des fichiers
+  # TODO ajouter les assets dans la declaration des fichiers
+  assets:
     - assets/i18n/
