@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">S4 : <strong>Programmation mobile</strong></a>
+                    <a class="navbar-brand" href="index.html">HTTP/JSON : <strong>Programmation mobile</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -42,19 +42,12 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s4">Accès réseau client et JSON</h3>
+                <h3 id="s4">HTTP, accès réseau client et JSON</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance : théorie (2h)</strong>
                     <p>
                         Vous devez regarder les videos suivantes:
                     </p>
-                    <ul>
-                        <li>Acces simple avec DIO : string int list de int</li>
-                        <li>Acces DIO et classe de transfert</li>
-                        <li>Acces DIO et UI : gestion de l'état</li>
-                        <li>Acces DIO et débogage / traces et interceptors</li>
-                        <li>Acces DIO et cookies</li>
-                    </ul>
                     <iframe width="200" height="150" src="https://www.youtube.com/embed/ZPbeMhcKITE?rel=0" frameborder="0" allowfullscreen>
                     </iframe><br>
                     <p>
@@ -81,10 +74,13 @@
                     <div class="alert alert-info">
                         <strong>Séance 1</strong>
                         <p>
-                            On expliquera comment envoyer une requête HTTP aux web services des exercices et réceptionner le résultat
+                            On expliquera comment envoyer une requête HTTP aux web services des exercices et réceptionner le résultat.
                         </p>
                         <p>
-                            On verra comment mettre en place des points d'arrêt pour déboguer des appels réseau qui ne marchent pas encore.
+                            On verra comment mettre en place des points d'arrêt et autres outils pour déboguer des appels réseau qui ne marchent pas encore.
+                        </p>
+                        <p>
+                            Vous travaillerez sur les exercices.
                         </p>
                     </div>
                     <div class="alert alert-info">
@@ -93,13 +89,17 @@
                             On expliquera à quoi servent les différentes classes de transfert et comment fonctionne la
                             generation de code pour JSON.
                         </p>
+                        <p>
+                            Vous finirez vos exercices si nécessaire et vous avancerez les appels HTTP et classes de transfert pour
+                            votre TP.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-12 well">
                     <div>
-                        <strong>Exercices correspondants</strong>
+                        <strong>Exercices</strong>
                         <div>
-                            <h3>Exercice simple</h3>
+                            <h3>Exercice http_simple</h3>
                             <p>
                                 Vous trouverez à l'url 
                                 <a href="https://exercices-web.herokuapp.com/exos/long/double/4">
@@ -107,43 +107,24 @@
                                 </a> un web service qui double la valeur du nombre qu'on lui passe.
                             </p>
                             <p>
-                                Tu dois démontrer un appel avec succès à ce web service dans une application Android depuis l'interface graphique. 
+                                Tu dois démontrer un appel avec succès à ce web service dans une application Flutter en envoyant la valeur d'un nombre et en affichant son double dans l'interface.
+                            </p>
+
+                            <h3>Exercice api_github</h3>
+                            <p>
+                                Créez un projet appelé <strong>api_github</strong>.
                             </p>
                             <p>
-                                Par exemple, une activité avec un EditText pour le nombre et un bouton pour déclencher l'appel. Au retour de la valeur (doublée), celle-ci est affichée dans un Toast.
+                                Votre projet doit avoir un écran avec un champ texte, un bouton et une liste. On rentre le nom d'utilisateur dans le champ texte, on appuie sur le bouton
+                                pour envoyer la demande à l'API et au retour de la liste, elle doit s'afficher dans l'interface graphique.
                             </p>
-                            <h3>Exercice Objet complexe</h3>
                             <p>
-                                Créez un projet appelé <strong>Complexe</strong>. Le projet doit partir une activité qui doit aller récupérer des données <a class="btn btn-xs btn-primary" href="https://exercices-web.herokuapp.com/exos/truc/complexe?name=whippsie" target="_blank">ici</a> (remplacez whippsie par votre prénom dans l'URL).
-                                Les champs récupérés doivent être affichés dans l'activité principale.
+                                Dans la liste on doit voir dans un ListTile le nom (name) du repo et s'il est privé ou non.
                             </p>
-                            
-                            
-                            <h3>Exercice Listes</h3>
                             <p>
-                                Créez un projet appelé <strong>Listes</strong>. Le projet doit partir une activité coupée en 2 dans le sense de la hauteur. Chaque moitié est occupée par un recyclerView qui sera peuplée par des appels suivants:
+                                L'URL pour les données est la suivante (exemple pour l'utilisateur jorisdeguet)
                             </p>
-                            <ul>
-                                <li>
-                                    <a href="https://exercices-web.herokuapp.com/exos/long/list" target="_blank">
-                                        https://exercices-web.herokuapp.com/exos/long/list
-                                    </a>
-                                    https://exercices-web.herokuapp.com/exos/long/list renvoie une liste de Long, chaque élément dans le recyclerView est un simple champ text où vous affichez la valeur du nombre
-                                </li>
-                                <li>
-                                    <a href="https://exercices-web.herokuapp.com/exos/truc/list" target="_blank">
-                                        https://exercices-web.herokuapp.com/exos/truc/list
-                                    </a>
-                                    renvoie une liste d'objets complexes. Chaque item du recyclerView doit afficher les 2 champs simple ainsi que la taille de la liste
-                                </li>
-                            </ul>
-                            
-                            <h3>Exercice Github API</h3>
-                            <p>
-                                Créez un projet appelé <strong>Repos</strong> dans lequel
-                                vous créerez un service simple en GET sur l'URL
-                                https://api.github.com/users/jorisdeguet/repos
-                            </p>
+                            <pre>https://api.github.com/users/jorisdeguet/repos</pre>
                         </div>
                     </div>
                 </div>
