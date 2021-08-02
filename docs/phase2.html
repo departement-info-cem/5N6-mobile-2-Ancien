@@ -44,29 +44,28 @@
         <div class="container">
             <div class="row">
                 <div class="hidden-xs">
-                    <h3 id="s1">Phase 2 : code serveur et classes de transfert</h3>
+                    <h3 id="s1">Phase 2 : gestion des images.</h3>
                     <div class="col-xs-4 alert">
-                        <strong>Le vrai serveur</strong>
+                        <strong>Serveur avec gestion des images</strong>
                         <p>
-                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Server">Le serveur</a>
-                             est fourni ainsi qu'une 
-                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Library">librairie</a>
-                             de classes de transfert (aussi appelés DTO). Vous devrez intégrer cette librairie dans votre projet Android.
+                            Le code du serveur avec stockage des images est fourni
+                            <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Server/tree/Images">
+                                ici
+                            </a>.
+                            Vous devez vous assurer d'utiliser la branche nommée Images
                         </p>
                         <p>
-                            Vous pourrez utiliser le code du serveur localement ou une version déployée sur une instance heroku.
+                            Vous pourrez utiliser le code du serveur localement ou une version déployée sur votre instance heroku.
                         </p>
-                        
                     </div>
                     <div class="col-xs-4 alert">
                         <p>
-                            Dans la phase 2, vous connecterez votre interface graphique de la phase 1 au serveur.
+                            Dans la phase 2, vous intégrerez les images dans votre application au niveau des tâches:
                         </p>
-                        <strong>Les étapes</strong>
                         <ul>
-                            <li>Appels Retrofit</li>
-                            <li>Classes de transfert</li>
-                            <li>Cookie et authentification</li>
+                            <li>Dans le détail d'une tâche, on pourra lui associer une image</li>
+                            <li>Dans la liste d'accueil, on verra une miniature de l'image de la tâche s'il y en a une</li>
+                            <li>On pourra modifier l'image dans le détail si nécessaire</li>
                         </ul>
                     </div>
                     <div class="col-xs-4 alert">
@@ -86,77 +85,65 @@
             </div>
             <div class="row">
                 <div class="col-md-4 alert">
-                    <strong>Inscription et connexion</strong>
+                    <strong>Ajout d'une image</strong>
                     <p>
-                        Vous devez effectuer les appels de connexion et d'inscription depuis les écrans correspondant.
+                        Vous ne changerez pas l'écran de création d'une tâche. L'ajout d'une image ne se fait que sur l'écran
+                        de détail.
+                    </p>
+                    <p>
+                        Vous devez ajouter un bouton à votre choix dans l'écran de consultation / détail d'une tâche.
+                        On veut que:
                     </p>
                     <ul>
-                        <li><span class="label label-success">2 points</span> <strong>/api/id/signin</strong> en <em>POST</em>, classes de transfert sont SigninRequest et SigninResponse</li>
-                        <li><span class="label label-success">2 points</span> <strong>/api/id/signup</strong> en <em>POST</em>, classes de transfert sont SignupRequest et SigninResponse</li>
+                        <li><span class="label label-success">1 point</span> l'appui sur le bouton donne accès aux photos de l'appareil</li>
+                        <li>on ne peut sélectionner une seule image</li>
+                        <li><span class="label label-success">1 point</span> cette image est envoyée au serveur et associée à la tâche avec le service web approprié</li>
+                        <li><span class="label label-success">1 point</span> l'image est ajoutée dans l'écran de consultation courant</li>
                     </ul>
-                    <p>
-                        La classe de réponse est la même pour les 2 car une inscription effectue également la connexion, il s'agit de SigninResponse.
-                    </p>
-                    <p>
-                        Vous devez vous assurer que votre application gère correctement les cookies, c'est nécessaire pour que le serveur maintienne votre identité à travers les différents appels.
-                    </p>
-                    <p>
-                        <span class="label label-success">2 points</span> Suite à inscription, votre tiroir doit afficher le nom d'utilisateur récupéré à la connexion. Nous vous recommandons de le stocker dans un singleton pour y avoir accès de toutes les activités.
-                    </p>
+
+                    <div>
+                        ATTENTION SI CETTE ETAPE NE MARCHE PAS, VOUS NE POUVEZ PAS FAIRE LA SUITE.
+                    </div>
                 </div>
+
+
                 
                 <div class="col-md-4 alert">
-                    <strong>Déconnexion</strong>
+                    <strong>Ecran d'accueil / liste</strong>
                     <p>
-                        La déconnexion se fait à partir du tiroir de navigation. Elle doit être fonctionnel dans toutes les activités avec le tiroir.
+                        Vous devez modifier la liste de l'écran d'accueil pour afficher les images pour les tâches qui en ont
+                        une.
                     </p>
                     <ul>
-                        <li><span class="label label-success">1 point</span> <strong>/api/id/signout</strong> en <em>POST</em></li>
-                        <li><span class="label label-success">1 point</span> la déconnexion fonctionne dans toutes les activités avec tiroir de navigation.</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    ATTENTION SI VOUS NE FAITES PAS INSCRIPTION ET CONNEXION, VOUS NE POURREZ PAS FAIRE LES OPÉRATIONS SUIVANTES.
-                </div>
-                
-                <div class="col-md-4 alert">
-                    <strong>Liste et création de tâche</strong>
-                    <p>
-                        Vous codez l'appel qui permet de récupérer la liste des tâches sur l'écran d'accueil ainsi que la création d'une nouvelle tâche. Les appels sont authentifiés, vous n'avez pas à gérer les messages d'erreur (ce sera dans la phase 3).
-                    </p>
-                    <ul>
-                        <li><span class="label label-success">1 point</span> <strong>/api/add</strong> en <em>POST</em>, envoie un AddTaskRequest et ne reçoit rien</li>
-                        <li><span class="label label-success">2 points</span>  <strong>/api/home</strong> en <em>GET</em>, n'envoie rien (identifié grâce à ton cookie), reçoit une liste de HomeItemResponse</li>
-                        
+                        <li><span class="label label-success">2 points</span> La mise en page doit fonctionner bien avec ou sans image</li>
+                        <li><span class="label label-success">1 point</span> La taille de l'image téléchargé correspond à la taille affichée</li>
+                        <li><span class="label label-success">1 point</span> On a un indicateur graphique que les images chargent si ça prend du temps</li>
                     </ul>
                 </div>
                 
-                <div>
-                    ATTENTION SI VOUS POUVEZ PAS CRÉER DE TÂCHE, VOUS NE POURREZ PAS FAIRE LA SUITE.
-                </div>
+
                 
                 <div class="col-md-4 alert">
-                    <strong>Consultation et avancement</strong>
+                    <strong>Multilingue</strong>
                     <p>
-                        Vous codez les appels pour l'écran de consultation / modification d'une tâche.
+                        <span class="label label-success">2 points</span> Vous devez coder les langues FR et EN dans vos applications. Tous les éléments de
+                        l'interface doivent être traduits (bouton, snackbars, messages etc.).
                     </p>
-                    <ul>
-                        <li><span class="label label-success">1 point</span> <strong>/api/detail/{id}</strong> <em>GET</em> prend l'id de la tâche et renvoie un TaskDetailResponse. Permet la récupération du détail de la tâche.</li>
-                        <li><span class="label label-success">1 point</span> <strong>/api/progress/{id}/{valeur}</strong> <em>GET</em> envoie l'id de la tâche et la nouvelle valeur d'avancement entre 0 et 100. Permet de changer le pourcentage d'avancement</li>
-                    </ul>
+                    <p>
+                        Vous devez tester le fonctionnement sur IOS et Android.
+                    </p>
                 </div>
+
                 
+
                 
                 <div class="col-md-4 alert">
-                    <strong>Déploiement du code serveur sur une instance cloud</strong>
+                    <strong>Déploiement PlayStore</strong>
                     <p>
-                        <span class="label label-success">2 points</span> Vous devez déployer le code du serveur sur une instance heroku.
+                        <span class="label label-success">2 points</span> Vous devez déployer votre application sur le
+                        PlayStore de Google. Vous ajouterez votre professeurs dans les testeurs de votre canal alpha.
                     </p>
-                    <p>
-                        <span class="label label-success">1 point</span> 
-                        Votre projet remis doit pointer vers votre instance cloud.
-                    </p>
+
                 </div>
             </div>
             
