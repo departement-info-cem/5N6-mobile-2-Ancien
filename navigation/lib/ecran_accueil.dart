@@ -56,7 +56,6 @@ class _EcranAccueilState extends State<EcranAccueil> {
 
           MaterialButton(
             onPressed: () {
-
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -67,7 +66,6 @@ class _EcranAccueilState extends State<EcranAccueil> {
             },
             child: Text('Vers Ecran B avec différente valeur du paramètre'),
           ),
-
 
         ],
       ),

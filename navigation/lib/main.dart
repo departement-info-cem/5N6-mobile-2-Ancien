@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Map<String, WidgetBuilder> routes() {
     return {
       '/ecrana': (context) => EcranA(),
-      '/ecranc': (context) => EcranC(),
+      '/accueil': (context) => EcranAccueil(),
     };
   }
 }
