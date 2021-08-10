@@ -25,6 +25,14 @@ class _EcranBState extends State<EcranB> {
       ),
       // TODO widget. donne accès aux paramètres du widget
       body: Text('Tu as navigué vers B avec ' + widget.le_parametre),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // TODO quand on pop, on revient à l'écran précédent
+          // ca enleve un ecran de la pile de navigation
+          Navigator.of(context).pop();
+        },
+        child: Icon(Icons.arrow_back),
+      ),
     );
   }
 }
