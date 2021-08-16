@@ -181,6 +181,85 @@
                             </ul>
                         </div>
                     </div>
+                    TODO AJOUTER LA PARTIE APPELS RESEAUX
+
+                    <div class="row">
+                        <div class="col-md-4 alert">
+                            <strong>Inscription et connexion</strong>
+                            <p>
+                                Vous devez effectuer les appels de connexion et d'inscription depuis les écrans correspondant.
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">2 points</span> <strong>/api/id/signin</strong> en <em>POST</em>, classes de transfert sont SigninRequest et SigninResponse</li>
+                                <li><span class="label label-success">2 points</span> <strong>/api/id/signup</strong> en <em>POST</em>, classes de transfert sont SignupRequest et SigninResponse</li>
+                            </ul>
+                            <p>
+                                La classe de réponse est la même pour les 2 car une inscription effectue également la connexion, il s'agit de SigninResponse.
+                            </p>
+                            <p>
+                                Vous devez vous assurer que votre application gère correctement les cookies, c'est nécessaire pour que le serveur maintienne votre identité à travers les différents appels.
+                            </p>
+                            <p>
+                                <span class="label label-success">2 points</span> Suite à inscription, votre tiroir doit afficher le nom d'utilisateur récupéré à la connexion. Nous vous recommandons de le stocker dans un singleton pour y avoir accès de toutes les activités.
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 alert">
+                            <strong>Déconnexion</strong>
+                            <p>
+                                La déconnexion se fait à partir du tiroir de navigation. Elle doit être fonctionnel dans toutes les activités avec le tiroir.
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">1 point</span> <strong>/api/id/signout</strong> en <em>POST</em></li>
+                                <li><span class="label label-success">1 point</span> la déconnexion fonctionne dans toutes les activités avec tiroir de navigation.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            ATTENTION SI VOUS NE FAITES PAS INSCRIPTION ET CONNEXION, VOUS NE POURREZ PAS FAIRE LES OPÉRATIONS SUIVANTES.
+                        </div>
+
+                        <div class="col-md-4 alert">
+                            <strong>Liste et création de tâche</strong>
+                            <p>
+                                Vous codez l'appel qui permet de récupérer la liste des tâches sur l'écran d'accueil ainsi que la création d'une nouvelle tâche. Les appels sont authentifiés, vous n'avez pas à gérer les messages d'erreur (ce sera dans la phase 3).
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">1 point</span> <strong>/api/add</strong> en <em>POST</em>, envoie un AddTaskRequest et ne reçoit rien</li>
+                                <li><span class="label label-success">2 points</span>  <strong>/api/home</strong> en <em>GET</em>, n'envoie rien (identifié grâce à ton cookie), reçoit une liste de HomeItemResponse</li>
+
+                            </ul>
+                        </div>
+
+                        <div>
+                            ATTENTION SI VOUS POUVEZ PAS CRÉER DE TÂCHE, VOUS NE POURREZ PAS FAIRE LA SUITE.
+                        </div>
+
+                        <div class="col-md-4 alert">
+                            <strong>Consultation et avancement</strong>
+                            <p>
+                                Vous codez les appels pour l'écran de consultation / modification d'une tâche.
+                            </p>
+                            <ul>
+                                <li><span class="label label-success">1 point</span> <strong>/api/detail/{id}</strong> <em>GET</em> prend l'id de la tâche et renvoie un TaskDetailResponse. Permet la récupération du détail de la tâche.</li>
+                                <li><span class="label label-success">1 point</span> <strong>/api/progress/{id}/{valeur}</strong> <em>GET</em> envoie l'id de la tâche et la nouvelle valeur d'avancement entre 0 et 100. Permet de changer le pourcentage d'avancement</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-md-4 alert">
+                            <strong>Déploiement du code serveur sur une instance cloud</strong>
+                            <p>
+                                <span class="label label-success">2 points</span> Vous devez déployer le code du serveur sur une instance heroku.
+                            </p>
+                            <p>
+                                <span class="label label-success">1 point</span>
+                                Votre projet remis doit pointer vers votre instance cloud.
+                            </p>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
