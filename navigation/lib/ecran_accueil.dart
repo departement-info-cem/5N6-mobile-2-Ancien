@@ -66,6 +66,18 @@ class _EcranAccueilState extends State<EcranAccueil> {
             },
             child: Text('Vers Ecran B avec différente valeur du paramètre'),
           ),
+          MaterialButton(
+            onPressed: () {
+
+              Navigator.pushNamed(
+                context,
+                '/ecranc',
+                arguments: '98qw67',
+              );
+              
+            },
+            child: Text('Vers Ecran C'),
+          ),
 
         ],
       ),
