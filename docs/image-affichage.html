@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>5N6 mob. av.</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><strong>Accueil</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s4">Images affichage client</h3>
+                <div class="col-md-6 alert alert-success">
+                    <strong>Affichage et taille</strong>
+                    <p>
+                        On va voir comment connaitre la taille d'un Container a l'execution.
+                        FittedBox LayoutBuilder MediaQuery AspectRatio Image ClipOval ImageFiltered RotatedBox
+                    </p>
+                    <p>
+                        On va aussi voir que la plupart du temps, je veux contrôler la taille d'un widget.
+                    </p>
+                    <strong>Contrôle d'accès</strong>
+                    <p>
+                        Consulter la page de 4N6 suivante pour un petit rappel sur le
+                        <a href="https://departement-info-cem.github.io/4N6-Mobile/12-1.html">
+                            contrôle d'accès
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    
+                    <div class="alert alert-info">
+                        <strong>Séance</strong>
+                        <p>
+                            On discutera de l'avantage de déterminer la taille de l'image à afficher avant de la télécharger.
+                        </p>
+                        <p>
+                            On discutera de l'importance du contrôle d'accès pour empêcher que les images soient accessibles
+                            aux personnes non authentifiées / qui n'ont pas les droits.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <strong>Exercices de la semaine</strong>
+                        <div >
+                            <h3>Exercice calcul_taille</h3>
+                            <p>
+                                Faites une petite application qui affiche un container prenant toute la hauteur de l'écran
+                                et les 5/6 de la largeur.
+                                Le contenu du container doit afficher les pixels de la largeur x pixels de la hauteur du
+                                container (pas de l'ecran au complet)
+                            </p>
+                            <p>
+                                Testez l'application sur une variété d'appareils / orientation d'ecran.
+                            </p>
+                            <h3>Exercice affichage</h3>
+                            <p>
+                                En vous servant des images disponibles ici:
+                                    voir exemple Android sur les images dans un tableau d'url pour Flutter
+                                Faites une liste d'images
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
