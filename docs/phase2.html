@@ -52,7 +52,7 @@
                             <a class="badge badge-success" href="https://github.com/departement-info-cem/KickMyB-Server/tree/Images">
                                 ici
                             </a>.
-                            Vous devez vous assurer d'utiliser la branche nommée Images
+                            Vous devez vous assurer d'utiliser la branche nommée <strong>Images</strong>
                         </p>
                         <p>
                             Vous pourrez utiliser le code du serveur localement ou une version déployée sur votre instance heroku.
@@ -65,7 +65,6 @@
                         <ul>
                             <li>Dans le détail d'une tâche, on pourra lui associer une image</li>
                             <li>Dans la liste d'accueil, on verra une miniature de l'image de la tâche s'il y en a une</li>
-                            <li>On pourra modifier l'image dans le détail si nécessaire</li>
                         </ul>
                     </div>
                     <div class="col-xs-4 alert">
@@ -100,6 +99,7 @@
                         <li>on ne peut sélectionner une seule image</li>
                         <li><span class="label label-success">1 point</span> cette image est envoyée au serveur et associée à la tâche avec le service web approprié</li>
                         <li><span class="label label-success">1 point</span> l'image est ajoutée dans l'écran de consultation courant</li>
+                        <li><span class="label label-success">1 point</span> s'il y avait une image, on la remplace</li>
                     </ul>
 
                     <div>
@@ -133,6 +133,20 @@
                     <p>
                         Vous devez tester le fonctionnement sur IOS et Android.
                     </p>
+
+
+                    <strong>Messages d'erreur</strong>
+                    <p>
+                        <span class="label label-success">3 points</span> Votre application doit afficher des messages d'erreur significatifs.
+                        Cela inclut les cas où l'utilisateur donne de mauvaises données (validation), les erreurs d'accès au serveur etc.
+                    </p>
+
+                    <strong>Indicateurs d'attente</strong>
+                    <p>
+                        <span class="label label-success">2 points</span> Vous devez donner un indicateur visuel quand votre application
+                        attend un retour du serveur. Vous devez également vous assurer qu'un utilisateur ne peut pas
+                        déclencher plusieurs fois l'action alors qu'elle est encore en cours de traitement.
+                    </p>
                 </div>
 
                 
@@ -150,21 +164,20 @@
             
             
             <div class="row ">
-                <div class="">
-                    <h3>Fonctionnement global</h3>
-                    <p>
-                        <span class="label label-danger">4 points négatifs</span> 
-                        Votre application doit fonctionner sans plantage et correctement. Ce pointage fonctionne en négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
-                        Dans le cas contraire, vous perdez des points avec un maximum de 4.
-                        Essayez votre application sur un téléphone 5 pouces (Pixel 2) en mode portrait.
-                    </p>
-                    <ul>
-                        <li>plantage de l'application -1 point</li>  
-                        <li>interface illisible -1 point</li>
-                        <li>information affichée incohérente -1 point</li> 
-                        <li>autre cas ...</li> 
-                    </ul>
-                </div>
+
+                <h3>Fonctionnement global</h3>
+                <p>
+                    <span class="label label-danger">4 points négatifs</span>
+                    Votre application doit fonctionner sans plantage et correctement. Ce pointage fonctionne en négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
+                    Dans le cas contraire, vous perdez des points avec un maximum de 4.
+                    Essayez votre application sur un téléphone 5 pouces (Pixel 2) en mode portrait.
+                </p>
+                <ul>
+                    <li>plantage de l'application -1 point</li>
+                    <li>interface illisible -1 point</li>
+                    <li>information affichée incohérente -1 point</li>
+                    <li>autre cas ...</li>
+                </ul>
             </div>
 
         </div>
