@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="page du cours professions informatiques">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+        <title>Problèmes fréquents</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style> body { padding-top: 70px;}</style>
+    </head>
+
+    <body>
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-dark" >
+            <div class="container">
+                <a class="navbar-brand text-light" href="#">Notice Mac</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#theCollapse" aria-controls="theCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="theCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="btn btn-outline-light ml-1" role="button" href="index.html" ><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <div>
+                            <h3>Se connecter sur le mac</h3>
+                            <ul>
+                                <li>Allumer le mac, le petit bouton noir en haut à droite du clavier</li>
+                                <li>Choisir le compte utilisateur invité</li>
+                                <li>Entrer le mot de passe : 000000</li>
+                            </ul>
+
+                            <h3>Se connecter au Wifi</h3>
+                            <p>
+                                Si le Wifi n'arrete pas de débarquer et rembarquer, redémarrer le mac.
+                            </p>
+
+                            <h3>Cloner son projet</h3>
+                            <ul>
+                                <li>Partir GitKraken ou Github Desktop</li>
+                                <li>Vous connecter a votre compte github</li>
+                                <li>Cloner le projet flutter localement.</li>
+                            </ul>
+
+                            <h3>Intellij</h3>
+                            <ul>
+                                <li>Ouvrir le finder (le bonhomme qui sourit)</li>
+                                <li>Chercher le dossier Applications</li>
+                                <li>Dedans demarrer l’application IntelliJ IDEA</li>
+                            </ul>
+
+
+
+                            <h3>Simulateur</h3>
+                            <ul>
+                                <li>Appuyer sur command et espace en meme temps</li>
+                                <li>Dans le champ de recherche taper simul</li>
+                                <li>Selectionner l’app simulator et taper return pour la demarrer</li>
+                            </ul>
+                            <p>
+                                Une fois le simulator demarre, vous devriez le voir dans les cibles sur Intellij
+                            </p>
+
+                            <h3>Déployer sur un iPad ou iPhone</h3>
+                            <p>
+                                L’utilisation d’un appareil physique necessite un compte Apple ID gratuit
+                            </p>
+                            <h4>Sur le mac</h4>
+                            <ul>
+                                <li>Ouvrez votre projet dans Intellij</li>
+                                <li>Selectionner le dossier ios a la racine de votre projet et faites clic droit</li>
+                                <li>Dans le sous-menu flutter faites « open ios module in Xcode »</li>
+                                <li>Selectionner Runner dans le panneau de gauche</li>
+                                <li>Selectionner l’onglet Signing & capabilities dans la zone centrale</li>
+                                <li>Selectionner le bouton Team et faites « add an account »</li>
+                                <li>Entrez vos identifiants d’apple ID ou créer le si pas encore fait.</li>
+                                <li>Vous devriez maintenant pouvoir selectionner un iPhone dans les appareils cibles</li>
+
+                                <li>Branchez le iPhone ou l'iPad dans l'ordi</li>
+                                <li>Tentez de partir l'appli dans Xcode</li>
+                                <li>Tentez de partir l'appli dans Intellij en choisissant le iPhone </li>
+
+                            </ul>
+
+                            <h4>Sur l'iPhone (iPad)</h4>
+                            <ul>
+                                <li>brancher l'appareil sur le mac (cable usb-c lightning)</li>
+                                <li>deverouiller l'appareil (code = 000000)</li>
+                                <li>sur l'ecran d'accueil tapper l'engrenage (Reglages ou settings)</li>
+                                <li>Tout en haut vous devez connecter l'appareil sur votre compte Apple</li>
+
+                            </ul>
+                            <h4>Problèmes</h4>
+                            Si en lançant l'appli depuis le mac sur l'iPhone vous avez un message d'erreur il faut:
+                            <ul>
+                                <li>Aller dans parametres ≥ general ≥ gestion des XXX</li>
+                                <li>dans ce menu la il y a une option faire confiance a l'appli</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <!-- /container -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
