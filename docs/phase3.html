@@ -45,122 +45,122 @@
 
             <div class="row">
                 <div class="col-xs-4 alert">
-                    <strong>Améliorations variées</strong>
+                    <strong>Sans serveur : firebase</strong>
                     <p>
-                        TODO
+                        Le but de ce travail est de reproduire le fonctionnement du TP2 tout en remplaçant le serveur
+                        Spring Boot par firebase.
                     </p>
                 </div>
-                <div class="col-xs-4 alert">
 
-                </div>
-                <div class="col-xs-4 alert">
-                    <strong>Git</strong>
-                    <span class="label label-success">1 point</span> Un minimum de 4 commits de tailles comparables. 
+                <div class="col-xs-8 alert">
+                    <strong>Repository Git</strong>
+                    (Ces points sont conditionnés à la remise d'au moins un commit toutes les 2 séances de cours.)
+                    <div>
+                        <span class="label label-success">1 point</span> Le nom du repo privé est <em>A21-4205N6-KickMyFlutterFire-Dupont</em> (remplace Dupont par ton nom de famille) sur github. (Instructions : <b><a href="https://departement-info-cem.github.io/git">ici</a></b> & <b><a href="introduction.html">ici</a></b> ) Tu dois ajouter le professeur dans les collaborateurs ayant accès en lecture à ton repository.
+                        Il s'agit d'un nouveau repo pour que tu puisses conserver ton TP2 fonctionnel.
+                    </div>
+                    <div>
+                        <span class="label label-success">2 points</span> Un minimum de 5 commits de tailles comparables. Au moins un commit par semaine de cours. De plus, il n'y a pas un commit avec tout dedans et les autres vides. Les commits décrivent l'avancement du projet dans un français correct (passe Word).
+                    </div>
                 </div>
             </div>
-            <div class="row well">
+            <div class="row">
 
-
-
-                <div class="col-xs-3 alert ">
-                    <strong>Multilingue</strong>
+                <div class="col-xs-5 ">
+                    <strong>Authentification</strong>
                     <p>
-                        <span class="label label-primary">2 points</span> TODO
-                        TODO
-                    </p>
-                    <p>
-                        TODO
-                    </p>
-                    <p>
-                        TODO
-                    </p>
-                </div>
-
-
-                <div class="col-xs-4 alert ">
-                    <strong>Gestion des erreurs</strong>
-                    <p>
-                        <span class="label label-primary">5 points</span> TODO
-						<ul>
-							<li>TODO</li>
-							<li>TODO</li>
-							<li>TODO</li>
-							<li>TODO</li>
-							<li>etc.</li>
-						</ul>
-                    </p>
-                    <p>
-                        TODO.
-                    </p>
-                    <p>
-                         <strong>RAPPEL :</strong> Tous les messages d'erreur doivent être traduits pour les 2 langues.
-                    </p>
-                </div> 
-
-
-                <div class="col-xs-5 alert ">
-                    <strong>TODO</strong>
-                    <p>
-                        <span class="label label-primary">1 point</span>
-                        TODO
-                    </p>
-                    <p>
-                        <span class="label label-primary">4 points</span>
-                        TODO
-                    </p>
-
-                    <p>
-                        TODO
-                    </p>
-                    <p>
-                        TODO
-                    </p>
-                    <p>
-                        TODO
-                    </p>
-                </div> 
-
-
-            </div>
-
-
-            <div class="row well">
-                <div class="col-md-8">
-                    <h3>TODO</h3>
-                    <p>
-                        TODO
+                        Le projet doit utiliser l'authentification
+                        de Firebase avec Google comme fournisseur de comptes. Plus précisément, il faut:
                     </p>
                     <ul>
-                        <li>ds</li>
+                        <li>Enlever l'écran d'inscription, l'utilisateur doit avoir un compte Google</li>
+                        <li><span class="label label-primary">1 point</span> Dans l'écran de connexion, tout retirer et remplacer par un unique bouton "Connexion avec Google".</li>
+                        <li><span class="label label-primary">2 points</span> Déclencher le dialogue de connexion Google sur le bouton de connexion et effectuer la connexion.</li>
+                        <li><span class="label label-primary">1 point</span> Le tiroir affiche le courriel de l'utilisateur connecté</li>
+                        <li><span class="label label-primary">1 point</span> Le tiroir permet de se déconnecter</li>
+                    </ul>
+                    <p>
+                        Le code doit fonctionner sur IOS et Android (la moitié des points si une seule plateforme fonctionne).
+                    </p>
+                </div>
+
+
+                <div class="col-xs-7 ">
+                    <strong>Données</strong>
+                    <p>
+                        Le projet doit utiliser Cloud Firestore pour le stockage des données de l'application. En détail:
+                    </p>
+                    <ul>
                         <li>
-                            <span class="label label-primary">1 point</span> 
-                            ds
-                        </li>  
-                        <li>
-                            <span class="label label-primary">2 points</span> 
-                            ds
+                            Vous devez stocker les tâches de l'utilisateur connecté incluant le nom, la date de création, la date de fin,
+                            le pourcentage d'avancement.
                         </li>
                         <li>
-                            <span class="label label-primary">1 point</span> 
-                            ds
-                        </li> 
+                            <span class="label label-primary">2 points</span>
+                            A la création d'une tâche, vous devez valider que le nom "trimmé" n'est pas vide. Vous devez aussi valider
+                            qu'il n'y a pas déjà une tâche pour cet utilisateur avec le même nom. Vous devez également valider que la date entrée
+                            est dans le futur.
+                        </li>
+                        <li>
+                            <span class="label label-warning">1 point</span>
+                            En cas d'erreur à la création, vous devez afficher un message d'erreur significatif.
+                        </li>
+                        <li>
+                            <span class="label label-primary">1 point</span>
+                            La liste d'accueil affiche les mêmes informations qu'au TP2.
+                            Vous devez donc calculer le pourcentage du temps écoulé.
+                        </li>
+                        <li>
+                            <span class="label label-primary">1 point</span>
+                            L'écran de détail affiche tous les éléments nécessaires et permet de modifier le pourcentage
+                            de complétion de la tâche.
+                        </li>
                     </ul>
+                    <p>
+                        Le code doit fonctionner sur IOS et Android (la moitié des points si une seule plateforme fonctionne).
+                    </p>
                 </div>
-                <div class="col-md-4">
+
+                <div class="col-xs-6 ">
+                    <strong>Image </strong>
+                    <p>
+                        Le projet doit utiliser Cloud Storage pour stocker les images des tâches
+                        de Firebase. Plus précisément, il faut:
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="label label-primary">1 point</span>
+                            A l'ajout d'une image, vous devez l'ajouter au Storage puis ajouter dans la tâche une
+                            référence (id ou url) au niveau Firectore
+                        </li>
+                        <li>
+                            <span class="label label-primary">1 point</span>
+                            L'image est affichée correctement que ce soit dans le détail ou dans la liste des tâches.
+                        </li>
+                    </ul>
+                    <p>
+                        Le code doit fonctionner sur IOS et Android (la moitié des points si une seule plateforme fonctionne).
+                    </p>
+                </div>
+                <div class="col-xs-6 well">
                     <h3>Fonctionnement global</h3>
                     <p>
-                        <span class="label label-danger">5 points négatifs</span> 
-                        Votre application doit fonctionner sans plantage et correctement. Ce pointage fonctionne en 
+                        <span class="label label-danger">5 points négatifs</span>
+                        Votre application doit fonctionner sans plantage et correctement. Ce pointage fonctionne en
                         négatif. Si l'application fonctionne correctement en tout temps, vous conservez votre note.
                         Dans le cas contraire, vous perdez des points avec un maximum de 5.
                     </p>
                     <ul>
-                        <li>plantage de l'application -1 point</li>  
+                        <li>plantage de l'application -1 point</li>
                         <li>interface illisible -1 point</li>
-                        <li>information affichée incohérente -1 point</li> 
-                        <li>autre cas ...</li> 
+                        <li>information affichée incohérente -1 point</li>
+                        <li>autre cas ...</li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="row ">
+
             </div>
         </div>
 
