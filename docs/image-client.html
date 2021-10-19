@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="page du cours programmation mobile">
+        <meta name="author" content="Département informatique, collège Édouard Montpetit">
+
+        <title>Image : affichage côté client</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding-top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">S8.2 : <strong>Image : affichage client</strong></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 id="s4">Flutter et l'affichage client</h3>
+                <div class="col-md-6 alert alert-success">
+                    <strong>Avant la séance : doc officielle et exemple</strong>
+                    <p>
+                        Vous pouvez lire la doc officielle
+                        <a href="https://api.flutter.dev/flutter/widgets/MediaQuery-class.html">
+                            sur la classe MediaQuery.
+                        </a>.
+                        La petite vidéo est intéressante pour avoir un apperçu des fonctionnalités.
+                    </p>
+
+                    <p>
+                        Vous devez également regarder le code de démo dans le repo ici:
+                        <a href="https://github.com/departement-info-cem/5N6-mobile-2/tree/master/image_client">
+                            démo de l'affichage client.
+                        </a>.
+                        Vous devez chercher les TODOs pour chercher les explications dans le code.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    
+                    <div class="alert alert-info">
+                        <strong>Séance</strong>
+                        <p>
+                            On regardera les avantages et inconvénients d'utiliser des images avec une taille fixe ou dynamique.
+                        </p>
+                        <p>
+                            On discutera des avantages de redimentionner des images.
+                        </p>
+                        <p>
+                            On discutera du "caching" des images.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12 well">
+                    <div>
+                        <strong>Exercices de la semaine</strong>
+                        <div>
+                            <h3>Exercice grosse_image</h3>
+                            <p>
+                                Utiliser l'URL https://exercices-web.herokuapp.com/exos/image pour afficher au moins 20 images dans un ListView
+                            </p>
+                            <p>
+                                Ajouter un paramètre à l'URL pour s'assurer que chaque image ne provient pas du cache, ça devrait rendre le tout désagréable à l'utilisation puisque l'image fait 10.5 mb
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Exercice redimentionnement</h3>
+                            <p>
+                                Faire 3 pages où vous n'aurez qu'à afficher l'image https://exercices-web.herokuapp.com/exos/image avec la taille la plus grande possible.
+                            </p>
+                            <p>
+                                La première page affichera l'image en basse résolution. La deuxième page affichera l'image en moyenne relotion et la dernière page affichera l'image en résolution maximale
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Exercice differentes_tailles</h3>
+                            <p>
+                                Faire 2 pages, la première affichera l'image https://exercices-web.herokuapp.com/exos/image le 1/3 de la largeur de l'écran
+                            </p>
+                            <p>
+                                La deuxième page affichera une image sur la moitié de la hateur et la moitié de la largeur. Pour vous aider, regarder la propriété BoxFit.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
