@@ -49,45 +49,75 @@
                         Le datastore utilise une approche de modélisation des données différente de SQL.
                     </p>
                     <p>
-                        Lire la doc officielle
+                        Vous pouvez regarder la doc sur le fonctionnement du Firestore 
+                        <a href="https://firebase.google.com/docs/firestore/data-model">ici</a>
                     </p>
+                    <p>
+                        Videos à regarder:
+                    </p>
+                    <iframe width="200" height="150" src="https://www.youtube.com/embed/sumhBN2BJt8?rel=0" frameborder="0" allowfullscreen>
+                    </iframe>
+                    <br>
+                    <iframe width="200" height="150" src="https://www.youtube.com/embed/tdmwt82ssqQ?rel=0" frameborder="0" allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-info">
-                        <strong>Séance 1 : </strong>
+                        <strong>Séance : </strong>
                         <p>
-                            Nous allons discuter de comment rattacher les données à l'utilisateur même si le compte de connexion
-                            n'est pas dans les données de l'application
+                            Nous discuterons des principes de base du Firestore et des parallèles à faire 
+                            entre un BD relationnelle et Firestore qui est orienté documents
                         </p>
-                        <ul>
-                            <li>quel identifiant pour l'utilisateur, courriel, ID fourni par FireBase ?</li>
-                            <li>Créer un compte dans le datastore qui utilise un identifiant de l'utilisateur</li>
-                            <li>uniquement inclure l'identifiant dans les objets stockés dans le datastore</li>
-                        </ul>
+                        <p>
+                            Nous apprendrons les principes de base pour utiliser Firestore dans une application flutter
+                        </p>
                     </div>
 
-                    <div class="alert alert-info">
-                        <strong>Séance 2 : </strong>
-                        <p>
-                            On discutera de sujets plus avancés comme :
-                        </p>
-                        <ul>
-                            <li>Les indices / index pour accéder rapidement aux données PERFORMANCE</li>
-                            <li>Les requêtes pour aller chercher des objets précis sans rapporter
-                                toute la BD sur le plan données de l'utilisateur PERFORMANCE</li>
-                            <li>Les transactions pour modifier des plusieurs objets proprement INTEGRITE</li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-md-12 well">
                     <div>
                         <strong>Exercices de la semaine</strong>
                         <div >
-                            <h3>Exercice TODO</h3>
+                            <h3>Exercice intro_datastore</h3>
                             <p>
-                               Dans votre projet de test
+                               À partir votre projet de test
+                            </p>
+                            <p>
+                                Créer une collection de jeux dans le Firestore (un jeux doit contenir au moins 2 champs)
+                            </p>
+                            <p>
+                                Faire 2 pages
+                            </p>
+                            <p>
+                                Une première qui nous permettera d'afficher tous les jeux (afficher seulement le nom du jeu dans la liste) et qui contiendra un bouton pour ajouter un jeux "hardcodé"
+                            </p>
+                            <p>
+                                Une deuxième qui nous permettera d'afficher le détail d'un jeu
                             </p>
                             
+                            <h3>Exercice fireinception</h3>
+                            <p>
+                               À partir votre projet de test
+                            </p>
+                            <p>
+                                Créer l'achitecture suivante
+                            </p>
+                            <ul>
+                                <li>Une maison</li>
+                                <ul>
+                                    <li>qui contient des pièces</li>
+                                    <ul>
+                                        <li>qui contiennent des meubles</li>
+                                        <ul>
+                                            <li>qui contiennent des boites</li>
+                                            <ul>
+                                                <li>qui contiennent des 🐈 </li>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                
+                            </ul>
 
                         </div>
                     </div>
