@@ -7,7 +7,7 @@
         <meta name="description" content="page du cours programmation mobile">
         <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-        <title>5N6 Firestore: Introduction</title>
+        <title>5N6 Firestore: Contrôle d'accès</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><strong>Firestore: Introduction</strong></a>
+                    <a class="navbar-brand" href="index.html"><strong>Firestore: Contrôle d'accès</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -42,83 +42,66 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s4">Firebase : stockage des données</h3>
+                <h3 id="s4">Firestore : Contrôle d'accès et typage des documents</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance : </strong>
                     <p>
-                        Le datastore utilise une approche de modélisation des données différente de SQL.
-                    </p>
-                    <p>
-                        Vous pouvez regarder la doc sur le fonctionnement du Firestore 
-                        <a href="https://firebase.google.com/docs/firestore/data-model">ici</a>
-                    </p>
-                    <p>
                         Videos à regarder:
                     </p>
-                    <iframe width="200" height="150" src="https://www.youtube.com/embed/sumhBN2BJt8?rel=0" frameborder="0" allowfullscreen>
+                    <iframe width="200" height="150" src="https://www.youtube.com/embed/bXVjxu5IRZY?rel=0" frameborder="0" allowfullscreen>
                     </iframe>
                     <br>
-                    <iframe width="200" height="150" src="https://www.youtube.com/embed/tdmwt82ssqQ?rel=0" frameborder="0" allowfullscreen>
+                    <iframe width="200" height="150" src="https://www.youtube.com/embed/wySmSnwjpXo?rel=0" frameborder="0" allowfullscreen>
                     </iframe>
                 </div>
                 <div class="col-md-6">
+
                     <div class="alert alert-info">
                         <strong>Séance : </strong>
                         <p>
-                            Nous discuterons des principes de base du Firestore et des parallèles à faire 
-                            entre un BD relationnelle et Firestore qui est orienté documents
+                            Nous allons discuter de comment rattacher les données à l'utilisateur même si le compte de connexion
+                            n'est pas dans les données de l'application
                         </p>
+                        <ul>
+                            <li>quel identifiant pour l'utilisateur, courriel, ID fourni par FireBase ?</li>
+                            <li>Créer un compte dans le datastore qui utilise un identifiant de l'utilisateur</li>
+                            <li>uniquement inclure l'identifiant dans les objets stockés dans le datastore</li>
+                        </ul>
+                        <br />
                         <p>
-                            Nous apprendrons les principes de base pour utiliser Firestore dans une application flutter
+                            Nous discuterons des avantages de typer nos documents lors des différentes opérations avec la BD.
                         </p>
                     </div>
-
                 </div>
                 <div class="col-md-12 well">
                     <div>
                         <strong>Exercices de la semaine</strong>
                         <div >
-                            <h3>Exercice intro_datastore</h3>
+                            <h3>Exercice save_user</h3>
                             <p>
                                À partir votre projet de test
                             </p>
                             <p>
-                                Créer une collection de jeux dans le Firestore (un jeux doit contenir au moins 2 champs)
+                                Faire une application qui vous permet de se connecter à Firebase
                             </p>
                             <p>
-                                Faire 2 pages
-                            </p>
-                            <p>
-                                Une première qui nous permettera d'afficher tous les jeux (afficher seulement le nom du jeu dans la liste) et qui contiendra un bouton pour ajouter un jeux "hardcodé"
-                            </p>
-                            <p>
-                                Une deuxième qui nous permettera d'afficher le détail d'un jeu
+                                Une fois connecté, sauvegarder l'utilisateur et ses informations dans le Firestore (nom et courriel)
                             </p>
                             
-                            <h3>Exercice fireinception</h3>
+                            <h3>Exercice type_jeux</h3>
                             <p>
                                À partir votre projet de test
                             </p>
                             <p>
-                                Créer l'achitecture suivante
+                                Créer une application qui vous permettra de créer des jeux (nom, type, plateforme, évaluation, date de sortie)
                             </p>
-                            <ul>
-                                <li>Une maison</li>
-                                <ul>
-                                    <li>qui contient des pièces</li>
-                                    <ul>
-                                        <li>qui contiennent des meubles</li>
-                                        <ul>
-                                            <li>qui contiennent des boites</li>
-                                            <ul>
-                                                <li>qui contiennent des 🐈 </li>
-                                            </ul>
-                                        </ul>
-                                    </ul>
-                                </ul>
-                                
-                            </ul>
-
+                            <p>
+                                Les jeux devront être ratachés à un utilisateur.
+                            </p>
+                            <p>
+                                Vous devrez créer une classe Jeu et faire le nécessaire pour utiliser la méthode withConverter.
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
