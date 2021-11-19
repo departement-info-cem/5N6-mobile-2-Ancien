@@ -40,6 +40,23 @@
 								<li><a target="_blank" href="https://youtu.be/aWd160BjRYE">IntelliJ Idea</a></li>
 								<li><a target="_blank" href="https://youtu.be/v10jAu1ELac">GitKraken</a></li>
 							</ul>
+                            <h1>Flutter</h1>
+                            <h3>Aucun projet ne démarre</h3>
+                            <p>
+                                Vous ne devez pas avoir d'accent dans le nom de votre usager windows
+                            </p>
+
+
+                            <h3>Le projet démarre mais il y a du rouge partout</h3>
+                            <p>
+                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                            </p>
+
+                            <h1>Android</h1>
+                            <h3><em>Cannot sync project with gradle files</em></h3>
+                            <p>
+                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                            </p>
                             <h3>Flutter Doctor ne trouve pas l'Installation d'Android Studio</h3>
                             <p>
                                 Faire la commande "flutter config --android-studio-dir" suivi du dossier d'Installation
@@ -48,19 +65,15 @@
                             <p>
                                 <code>flutter config --android-studio-dir="C:\Program Files\Android\Android Studio"</code>
                             </p>
-							<h3>Aucun projet ne démarre</h3>
+                            <h3><em>Do you want to uninstall the existing application?</em></h3>
+                            <p>Vérifie que l'application n'est pas déjà sur le périphérique. Si c'est le cas supprime la.</p>
                             <p>
-                                Vous ne devez pas avoir d'accent dans le nom de votre usager windows
+                                Dans le dossier du projet, entre dans le dossier app, ensuite  supprime le dossier <strong>build</strong>. Cela supprime tous les fichiers compilés et force à recompiler l'ensemble de l'application.
                             </p>
-
-							<h3>Mon projet part sur PC mais pas sur MacOS sur un simulateur IOS</h3>
-							  <p>
-                                Ouvrez le terminal dans Intellij et tapez "flutter clean"
-                            </p>
-                            <h3>Le projet démarre mais il y a du rouge partout</h3>
                             <p>
                                 Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
                             </p>
+
                             <h3>Je ne vois pas mon périphérique au lancement de l'appli</h3>
                             <p>
                                 Aller dans les options développeur de la tablette / telephone, désactiver Débogage USB, Annuler les autorisations relatives au …, réactiver Débogage USB
@@ -76,18 +89,28 @@
                             <p>
                                 Redémarrer la machine de développement
                             </p>
-                            <h3><em>Cannot sync project with gradle files</em></h3>
+
+                            <h1>IOS</h1>
+                            <h3>Mon projet part sur PC mais pas sur MacOS sur un simulateur IOS</h3>
+                            <ul>
+                                <li>Ouvrez le terminal dans Intellij et tapez "flutter clean"</li>
+                                <li>Assure toi d'ouvrir le module IOS dans Xcode</li>
+                            </ul>
+
+                            <h3>"The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions"</h3>
                             <p>
-                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
+                                Dans le fichier ios/Flutter/AppFrameworkInfo.plist, tu devrais avoir
+                                <pre><key>MinimumOSVersion</key>
+  <string>10.0</string></pre>
                             </p>
-                            <h3><em>Do you want to uninstall the existing application?</em></h3>
-                            <p>Vérifie que l'application n'est pas déjà sur le périphérique. Si c'est le cas supprime la.</p>
+
+                            <h3>"Error output from CocoaPods"</h3>
+                            <h3>"Automatically assigning platform `iOS` with version `9.0` on target `Runner` because no platform was specified"</h3>
                             <p>
-                                Dans le dossier du projet, entre dans le dossier app, ensuite  supprime le dossier <strong>build</strong>. Cela supprime tous les fichiers compilés et force à recompiler l'ensemble de l'application.
+                                Verifie le fichier ios/Podfile.
+                                La 2ème ligne devrait être décommentée et dire <em>platform :ios, '10.0'</em>
                             </p>
-                            <p>
-                                Essaie <strong>File </strong> > <strong>Invalidate Cache / Restart</strong> puis <em>Invalidate Cache / Restart</em>.
-                            </p>
+
                         </div>
                     </div>
                 </div>
