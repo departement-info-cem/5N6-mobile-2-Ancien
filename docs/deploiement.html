@@ -7,7 +7,7 @@
         <meta name="description" content="page du cours programmation mobile">
         <meta name="author" content="Département informatique, collège Édouard Montpetit">
 
-        <title>5N6 Multilingue et déploiement</title>
+        <title>5N6 Déploiement</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><strong>Flutter multilingue et déploiement</strong></a>
+                    <a class="navbar-brand" href="index.html"><strong>Flutter déploiement</strong></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
@@ -42,7 +42,7 @@
 
         <div class="container">
             <div class="row">
-                <h3 id="s4">Multilingue et déploiement</h3>
+                <h3 id="s4">Déploiement, portrait/paysage et multiplateforme</h3>
                 <div class="col-md-6 alert alert-success">
                     <strong>Avant la séance : </strong>
                     <p>
@@ -55,19 +55,6 @@
                     </p>
                     <p>    
                         Ce n'est pas nécessaire d'avoir un compte développeur, un compte Apple gratuit sera suffisant pour nos besoins dans ce cours.
-                    </p>
-                    <p>
-                        Vous pouvez regarder la doc de Flutter en ligne sur l'internationalization
-                        <a href="https://flutter.dev/docs/development/accessibility-and-localization/internationalization">ici</a>
-                    </p>
-                    <p>
-                        Vous devrez étudier l'exemple de code suivant sur le
-                        <a class="badge badge-primary"
-                           target="_blank"
-                           href="https://github.com/departement-info-cem/5N6-mobile-2/tree/master/multiling">
-                            multilingue
-                        </a>.
-                        Cherchez les TODOs pour les explications. Dans IntelliJ View > Tool Windows > TODO.
                     </p>
                     <p>
                         Vous devrez étudier l'exemple de code suivant sur le
@@ -91,26 +78,16 @@
                 <div class="col-md-6">
                     
                     <div class="alert alert-info">
-                        <strong>Séance 1 : Multilingue</strong>
+                        <strong>Séance 1 : OrientationBuilder</strong>
                         <p>
-                            On regardera comment ajouter plusieurs langues dans une application.
+                            Nous regarderons comment utiliser l'OrientationBuilder pour contrôler les changements d'orientations
                         </p>
-                        <p>
-                            Vous compléterez les exercices pour vous pratiquer.
-                        </p>
-                    </div>
-
-                    <div class="alert alert-info">
-                        <strong>Séance 1.5 : Déploiement</strong>
                         <p>
                             Vous compléterez les exercices pour comprendre les différents enjeux de la publication d'une application.
                         </p>
                     </div>
                     <div class="alert alert-info">
                         <strong>Séance 2 : Déploiement</strong>
-                        <p>
-                            Nous regarderons comment utiliser l'OrientationBuilder pour contrôler les changements d'orientations
-                        </p>
                         <p>
                             Vous compléterez les exercices pour comprendre les différents enjeux de la publication d'une application.
                         </p>
@@ -120,45 +97,7 @@
                     <div>
                         <strong>Exercices de la semaine</strong>
                         <div >
-                            <h3>Exercice multilingue_bizarre</h3>
-                            <p >
-                                Vous devez reproduire la mise en page de l'image suivante dans une appli Flutter appelée multilingue_bizarre.
-                                Rendre l'application disponible dans les langues suivantes:
-                            </p>
-                            <ul>
-                                <li>Francais</li>
-                                <li>Norvégien</li>
-                                <li>Japonais</li>
-                            </ul>
                             
-                            <img src="img/s5e1-1.png" style="width: 200px;">
-                            <img src="img/s5e1-2.png" style="width: 200px;">
-                            <img src="img/s5e1-3.png" style="width: 200px;">
-                            
-                            <h3>Exercice multiplateforme</h3>
-                            <p>
-                                Regarder les liens suivants:
-                            </p>
-                            <p>
-                                <a href="https://medium.com/flutter/do-flutter-apps-dream-of-platform-aware-widgets-7d7ed7b4624d">
-                                    Choisir un widget en fonction de la plateforme
-                                </a>
-                            </p>
-                            <p>
-                                <a href="https://pub.dev/packages/flutter_platform_widgets">
-                                    Widgets multiplateforme
-                                </a>
-                            </p>
-                            <p>                                
-                                Reproduire les mises en page suivantes dans une appli Flutter appelée multiplateforme.
-                                L'application devra utiliser le style natif du système d'exploitation.
-                            </p>
-                            <p>
-                                Il sera important de tester avec un Mac pour valider la mise en page sur appareil Apple.
-                            </p>
-                            <img src="img/s5e2-1.png" style="width: 200px;">
-                            <img src="img/s5e2-2.png" style="width: 200px;">
-
                             <h3>Exercice plein_de_tailles</h3>
                             <p>
                                 Reproduire les mises en page suivantes dans une appli Flutter appelée plein_de_tailles.
@@ -183,6 +122,50 @@
                             </ul>
                             <img src="img/s5e3-1.png" style="width: 200px;">
                             <img src="img/s5e3-2.png" style="height: 200px;">
+
+                            <h3>Exercice multiplateforme</h3>
+                            <p>
+                                Regarder le lien suivant:
+                            </p>
+                            <p>
+                                <a href="https://pub.dev/packages/flutter_platform_widgets">
+                                    Widgets multiplateforme
+                                </a>
+                            </p>
+                            <p>
+                                Vous pouvez utiliser les platform widgets ou encore faire le travail manuellement en regardant la plateforme de l'appareil
+                                <code>
+
+                                    <pre>
+@override
+Widget build(BuildContext context) {
+
+    if(Platform.isAndroid) {
+        return ElevatedButton(
+            onPressed: _incrementCounter,
+            child: Text('Joli bouton'),
+        );
+    } else if (Platform.isIOS) {
+        return CupertinoButton(
+            onPressed: _incrementCounter,
+            child: Text('Joli bouton'),
+            color: Colors.blue,
+        );
+    }
+
+}
+                                    </pre>
+                                </code>
+                            </p>
+                            <p>                                
+                                Reproduire les mises en page suivantes dans une appli Flutter appelée multiplateforme.
+                                L'application devra utiliser le style natif du système d'exploitation.
+                            </p>
+                            <p>
+                                Il sera important de tester avec un Mac pour valider la mise en page sur appareil Apple.
+                            </p>
+                            <img src="img/s5e2-1.png" style="width: 200px;">
+                            <img src="img/s5e2-2.png" style="width: 200px;">
                         </div>
                     </div>
                 </div>
