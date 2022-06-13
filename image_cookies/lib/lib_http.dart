@@ -14,6 +14,6 @@ class SingletonDio {
   }
 
   static Future<void> signUpAndGetCookie() async {
-    await getDio().post('http://127.0.0.1:8080/api/id/signup', data: '{username: "bob' + DateTime.now().toString() + '", password: "bob"}');
+    await getDio().post('http://10.0.2.2:8080/api/id/signup', data: '{username: "bob' + DateTime.now().toString() + '", password: "123456"}');
   }
 }

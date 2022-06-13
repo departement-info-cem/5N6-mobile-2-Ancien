@@ -60,11 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
       Dio dio = SingletonDio.getDio();
 
       var response = await dio.post(
-          "http://127.0.0.1:8080/api/singleFile", data: formData);
+          "http://10.0.2.2:8080/api/singleFile", data: formData);
 
       String id = response.data as String;
 
-      imageURL = "http://127.0.0.1:8080/api/singleFile/" + id;
+      imageURL = "http://10.0.2.2:8080/api/singleFile/" + id;
 
       List<Cookie> cookies = await SingletonDio.cookiemanager.cookieJar.loadForRequest(Uri.parse(imageURL));
       cookie = cookies.first;
