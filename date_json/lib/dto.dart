@@ -19,6 +19,6 @@ class TrucAvecUneDate {
 }
 
 // TODO ici on force le format de la date et on fournit les fonctions de conversion dans les 2 sens
-final _dateFormatter = DateFormat('MMM d, yyyy, h:mm:ss a');
+final _dateFormatter = DateFormat("yyyy-MM-dd'T'HH:mm:ss");
 DateTime _fromJson(String date) => _dateFormatter.parse(date);
 String _toJson(DateTime date) => _dateFormatter.format(date);
