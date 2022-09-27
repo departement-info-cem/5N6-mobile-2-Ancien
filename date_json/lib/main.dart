@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // on construit un objet pour l'aller
     TrucAvecUneDate aller = TrucAvecUneDate();
     aller.date = DateTime.now();
+    print("object en JSON " + aller.toJson().toString());
     try {
       TrucAvecUneDate retour = await envoiLeDonc(aller);
       print(retour.date.toIso8601String());

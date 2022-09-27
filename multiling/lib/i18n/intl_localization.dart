@@ -29,6 +29,6 @@ class Locs {
   }
 
   String trans(String key) {
-    return this._sentences[key]!;
+    return this._sentences.containsKey(key) ? this._sentences[key]! : "TODO";
   }
 }
