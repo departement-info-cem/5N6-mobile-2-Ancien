@@ -63,13 +63,80 @@
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-info">
-                        <strong>Séance : </strong>
+                        <h1>Séance 1 : </h1>
+                        <h2>Intro</h2>
                         <p>
                             Nous discuterons des principes de base du Firestore et des parallèles à faire 
-                            entre un BD relationnelle et Firestore qui est orienté documents
+                            entre un BD relationnelle et Firestore qui est orienté documents/collections
                         </p>
                         <p>
-                            Nous apprendrons les principes de base pour utiliser Firestore dans une application flutter
+                            Revenir sur différence entre modèle et classes de transfert (DTO). On fait du modèle ici.
+                        </p>
+                        <h2>ID, généré ou fixé</h2>
+                        <p>
+                            Chaque document dans firestore a un identifiant comme votre BD préférée.
+                        <p>
+                        <ul>
+                            <li>on peut laisser firebase fixer l'ID à l'ajout (add)</li>
+                            <li>on peut choisir l'ID</li>
+                        </ul>
+<pre>
+db
+    .collection("cities")
+    .doc("monIDfait maison")
+    .set(city)
+    .onError((e, _) => print("Error writing document: $e"));
+</pre>
+
+<pre>
+db.collection("cities").add(data).then((documentSnapshot) =>
+    print("Added Data with ID: ${documentSnapshot.id}"));
+</pre>
+                        <h2>Comment relier l'utilisateur à ses tâches</h2>
+                        <p>
+                            Nous avons des utilisateurs qui ont chacun des tâches dans leur compte.
+                            Comme on utilise des comptes Google, nous n'avons pas forcément besoin d'une
+                            collection d'utilisateurs.
+                        </p>
+                        <ul>
+                            <li>Une collections d'utilisateurs, chaque utilisateur contient une collections de tâches</li>
+                            <li>Créer un compte dans le datastore qui utilise un identifiant de l'utilisateur</li>
+                            <li>uniquement inclure l'identifiant dans les objets stockés dans le datastore</li>
+                        </ul>
+                        <br />
+
+                    </div>
+
+                    <div class="alert alert-info">
+
+                        <h1>Séance 2 : </h1>
+                        <h2>Query ou pas</h2>
+                        <p>
+                            Eh ben ça dépend de comment on a modélisé
+                        </p>
+                        <h2>Accès typés, fromJson / toJson</h2>
+<pre>
+final moviesRef = FirebaseFirestore.instance.collection('movies').withConverter&lt;Movie&gt;(
+fromFirestore: (snapshot, _) => Movie.fromJson(snapshot.data()!),
+toFirestore: (movie, _) => movie.toJson(),
+);
+</pre>
+
+                    </div>
+
+                    <div class="alert alert-info">
+
+                        <strong>Séance 3 : </strong>
+                        <p>
+                            voir comment chopper le temps du serveur Timestamp:
+                            https://stackoverflow.com/questions/50632217/converting-timestamp
+                            ServerValue.timestamp
+                            ou faire confiance au temps du client  firebase.database.ServerValue.TIMESTAMP
+                        </p>
+
+                        <p>
+                            dans un exercice tester ce qui se passe quand on coupe l'internet sur les operations
+                            du TP
                         </p>
                     </div>
 
