@@ -69,6 +69,19 @@
                             Nous discuterons des principes de base du Firestore et des parallèles à faire 
                             entre un BD relationnelle et Firestore qui est orienté documents/collections
                         </p>
+                        <h2>Rappels : Service/Repo, entités/DTO</h2>
+                        <p>
+                            La couche firestore correspond à votre repository. Reste maintenant à implanter
+                            les validations, contrôles d'accès, tri, règles applicatives etc.
+                        </p>
+                        <p>
+                            Pour ces différentes raisons, on vous recommande de vous faire un <em>service.dart</em>
+                            où on regroupera les différentes méthodes de service. On vous suggère de faire ainsi:
+                        </p>
+                        <ul>
+                            <li>Le seul endroit où on appelle les méthodes de firestore, c'est dans service.dart</li>
+                            <li>Quand l'interface graphique veut faire quelque chose, elle appelle une fonction de service.dart</li>
+                        </ul>
                         <p>
                             Revenir sur différence entre modèle et classes de transfert (DTO). On fait du modèle ici.
                         </p>
