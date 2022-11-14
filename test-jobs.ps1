@@ -16,3 +16,5 @@ function Popi() {
 
 start powershell ${function:Pipo} 
 start powershell ${function:Popi} 
+start powershell ${function:Pipo} 
+start powershell ${function:Popi} 
