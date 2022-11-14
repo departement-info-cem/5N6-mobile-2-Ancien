@@ -1,0 +1,1 @@
+﻿emulator -avd avd_name

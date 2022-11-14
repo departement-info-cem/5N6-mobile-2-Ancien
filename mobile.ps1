@@ -3,6 +3,7 @@
 $INITIAL_DIR = Get-Location
 
 $DOWNLOADS = "Z:\.config\android"
+$DOWNLOADS = "\\ed4depinfo\Cours\A22\3N5"
 # $DOWNLOADS = $HOME + '\Downloads'
 
 $STUDIO_URL = 'https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.3.1.17/android-studio-2021.3.1.17-windows.zip'
@@ -124,115 +125,123 @@ Invoke-Env-Reload
 
 Write-Host '🕰️  Mise à jour des variables d''environnement' -ForegroundColor Blue
 
-Add-Env "ANDROID_SDK_ROOT" "$HOME\AppData\Local\Android\Sdk"
-Add-Env "ANDROID_HOME" "$env:ANDROID_SDK_ROOT"
-Add-Env "Path" "$env:ANDROID_SDK_ROOT\cmdline-tools\version\bin"
+function Install-Android() {
+    Add-Env "ANDROID_SDK_ROOT" "$HOME\AppData\Local\Android\Sdk"
+    Add-Env "ANDROID_HOME" "$env:ANDROID_SDK_ROOT"
+    Add-Env "Path" "$env:ANDROID_SDK_ROOT\cmdline-tools\version\bin"
 
-Write-Host '🕹️  Command Line Tools' -ForegroundColor Blue
+    Write-Host '🕹️  Command Line Tools' -ForegroundColor Blue
 
-if (-Not ( Test-Path $env:ANDROID_SDK_ROOT\cmdline-tools\version\bin )) {
-    Invoke-Download "Command Line Tools" $CMD_LINE_TOOLS_URL "commandlinetools"
-    # Créer hiérarchie pour tools
-    [void](New-Item -type directory -Path "$env:ANDROID_SDK_ROOT\cmdline-tools\" -Force)
-    Invoke-Install "Command Line Tools" $env:ANDROID_SDK_ROOT\cmdline-tools "cmdline-tools" "commandlinetools"
-    Rename-Item "$env:ANDROID_SDK_ROOT\cmdline-tools\cmdline-tools" "version"
-}
-else {
-    Write-Host '    ✔️  Command Line Tools est déjà installé.' -ForegroundColor Green
-}
+    if (-Not ( Test-Path $env:ANDROID_SDK_ROOT\cmdline-tools\version\bin )) {
+        Invoke-Download "Command Line Tools" $CMD_LINE_TOOLS_URL "commandlinetools"
+        # Créer hiérarchie pour tools
+        [void](New-Item -type directory -Path "$env:ANDROID_SDK_ROOT\cmdline-tools\" -Force)
+        Invoke-Install "Command Line Tools" $env:ANDROID_SDK_ROOT\cmdline-tools "cmdline-tools" "commandlinetools"
+        Rename-Item "$env:ANDROID_SDK_ROOT\cmdline-tools\cmdline-tools" "version"
+    }
+    else {
+        Write-Host '    ✔️  Command Line Tools est déjà installé.' -ForegroundColor Green
+    }
 
-Write-Host '🧮  Installation des outils de développement d''Android' -ForegroundColor Blue
+    Write-Host '🧮  Installation des outils de développement d''Android' -ForegroundColor Blue
 
-Write-Host '    👍 Installation démarrée.' -ForegroundColor Blue
+    Write-Host '    👍 Installation démarrée.' -ForegroundColor Blue
 
-sdkmanager 'platform-tools' "platforms;android-$CURRENT_SDK_VERSION" "system-images;android-$CURRENT_SDK_VERSION;google_apis;x86_64" "build-tools;$CURRENT_BUILD_TOOLS_VERSION" "cmdline-tools;latest"
+    echo yes | sdkmanager 'platform-tools' "platforms;android-$CURRENT_SDK_VERSION" "system-images;android-$CURRENT_SDK_VERSION;google_apis;x86_64" "build-tools;$CURRENT_BUILD_TOOLS_VERSION" "cmdline-tools;latest"
 
-Write-Host '    ✔️  Outils installé' -ForegroundColor Green
+    Write-Host '    ✔️  Outils installé' -ForegroundColor Green
 
-Write-Host '👾  Création de la machine virtuelle' -ForegroundColor Blue
+    Write-Host '👾  Création de la machine virtuelle' -ForegroundColor Blue
 
-if (-Not ($(avdmanager list avd) -is [array])) {
-    avdmanager -s create avd -n pixel -k "system-images;android-$CURRENT_SDK_VERSION;google_apis;x86_64" --device "pixel_5"
-    Write-Host '    ✔️  La machine virtuelle a été créée.' -ForegroundColor Green
-}
-else {
-    Write-Host '    ✔️  La machine virtuelle existe déjà.' -ForegroundColor Green
-}
+    if (-Not ($(avdmanager list avd) -is [array])) {
+        avdmanager -s create avd -n pixel -k "system-images;android-$CURRENT_SDK_VERSION;google_apis;x86_64" --device "pixel_5"
+        Write-Host '    ✔️  La machine virtuelle a été créée.' -ForegroundColor Green
+        avdmanager -avd pixel 
+    }
+    else {
+        Write-Host '    ✔️  La machine virtuelle existe déjà.' -ForegroundColor Green
+    }
 
-Write-Host '🤖  Android Studio' -ForegroundColor Blue
+    Write-Host '🤖  Android Studio' -ForegroundColor Blue
 
-if (-Not ( Test-Path $HOME\android-studio )) {
-    Invoke-Download "Android Studio" $STUDIO_URL "android-studio"
-    Invoke-Install "Android Studio" "$HOME" "android-studio\bin" "android-studio"
-    Add-Shortcut $HOME\android-studio\bin\studio64.exe "Android Studio"
-}
-else {
-    Write-Host '    ✔️  Android Studio est déjà installé.'  -ForegroundColor Green
-}
+    if (-Not ( Test-Path $HOME\android-studio )) {
+        Invoke-Download "Android Studio" $STUDIO_URL "android-studio"
+        Invoke-Install "Android Studio" "$HOME" "android-studio\bin" "android-studio"
+        Add-Shortcut $HOME\android-studio\bin\studio64.exe "Android Studio"
+    }
+    else {
+        Write-Host '    ✔️  Android Studio est déjà installé.'  -ForegroundColor Green
+    }
 
-Add-Env "Path" "$HOME\android-studio\bin"
+    Add-Env "Path" "$HOME\android-studio\bin"
 
-if (-Not(Test-Path $HOME\android-studio\plugins\flutter-intellij)) {
-    Invoke-Download "plugin Flutter" $FLUTTER_PLUGIN_URL_STUDIO "plugin-flutter-android-studio"
-    Invoke-Install "plugin Flutter" "$HOME\android-studio\plugins" "flutter-intellij" "plugin-flutter-android-studio"
-}
-else {
-    Write-Host '    ✔️  Le plugin Flutter est déjà installé.'  -ForegroundColor Green
-}
+    if (-Not(Test-Path $HOME\android-studio\plugins\flutter-intellij)) {
+        Invoke-Download "plugin Flutter" $FLUTTER_PLUGIN_URL_STUDIO "plugin-flutter-android-studio"
+        Invoke-Install "plugin Flutter" "$HOME\android-studio\plugins" "flutter-intellij" "plugin-flutter-android-studio"
+    }
+    else {
+        Write-Host '    ✔️  Le plugin Flutter est déjà installé.'  -ForegroundColor Green
+    }
 
-if (-Not(Test-Path $HOME\android-studio\plugins\dart)) {
-    Invoke-Download "plugin Dart" $DART_PLUGIN_URL_STUDIO "plugin-dart-android-studio"
-    Invoke-Install "plugin Dart" "$HOME\android-studio\plugins" "dart" "plugin-dart-android-studio"
-}
-else {
-    Write-Host '    ✔️  Le plugin Dart est déjà installé.'  -ForegroundColor Green
-}
-
-Write-Host '🧠  IntelliJ' -ForegroundColor Blue
-
-if (-Not ( Test-Path $HOME\idea )) {
-    Invoke-Download "IntelliJ" "https://data.services.jetbrains.com/products/download?platform=windowsZip&code=IIU" "idea"
-    Invoke-Install "IntelliJ" "$HOME\idea" "bin" "idea"
-    Add-Shortcut $HOME\idea\bin\idea64.exe "IntelliJ IDEA Ultimate"
-}
-else {
-    Write-Host '    ✔️  IntelliJ est déjà installé.'  -ForegroundColor Green
+    if (-Not(Test-Path $HOME\android-studio\plugins\dart)) {
+        Invoke-Download "plugin Dart" $DART_PLUGIN_URL_STUDIO "plugin-dart-android-studio"
+        Invoke-Install "plugin Dart" "$HOME\android-studio\plugins" "dart" "plugin-dart-android-studio"
+    }
+    else {
+        Write-Host '    ✔️  Le plugin Dart est déjà installé.'  -ForegroundColor Green
+    }
 }
 
-Add-Env "Path" "$HOME\idea\bin"
+function Install-Idea(){
+    Write-Host '🧠  IntelliJ' -ForegroundColor Blue
 
-if (-Not(Test-Path $HOME\idea\plugins\flutter-intellij)) {
-    Invoke-Download "plugin Flutter" $FLUTTER_PLUGIN_URL_IDEA "plugin-flutter-idea"
-    Invoke-Install "plugin Flutter" "$HOME\idea\plugins" "flutter-intellij" "plugin-flutter-idea"
+    if (-Not ( Test-Path $HOME\idea )) {
+        Invoke-Download "IntelliJ" "https://data.services.jetbrains.com/products/download?platform=windowsZip&code=IIU" "idea"
+        Invoke-Install "IntelliJ" "$HOME\idea" "bin" "idea"
+        Add-Shortcut $HOME\idea\bin\idea64.exe "IntelliJ IDEA Ultimate"
+    }
+    else {
+        Write-Host '    ✔️  IntelliJ est déjà installé.'  -ForegroundColor Green
+    }
+
+    Add-Env "Path" "$HOME\idea\bin"
+
+    if (-Not(Test-Path $HOME\idea\plugins\flutter-intellij)) {
+        Invoke-Download "plugin Flutter" $FLUTTER_PLUGIN_URL_IDEA "plugin-flutter-idea"
+        Invoke-Install "plugin Flutter" "$HOME\idea\plugins" "flutter-intellij" "plugin-flutter-idea"
+    }
+    else {
+        Write-Host '    ✔️  Le plugin Flutter est déjà installé.'  -ForegroundColor Green
+    }
+
+    if (-Not(Test-Path $HOME\idea\plugins\dart)) {
+        Invoke-Download "plugin Dart" $DART_PLUGIN_URL_IDEA "plugin-dart-idea"
+        Invoke-Install "plugin Dart" "$HOME\idea\plugins" "dart" "plugin-dart-idea"
+    }
+    else {
+        Write-Host '    ✔️  Le plugin Dart est déjà installé.'  -ForegroundColor Green
+    }
 }
-else {
-    Write-Host '    ✔️  Le plugin Flutter est déjà installé.'  -ForegroundColor Green
+
+
+function Update-Flutter() {
+    $INITIAL_DIR = Get-Location
+    Write-Host '🐤  Flutter' -ForegroundColor Blue
+    [void](git config --global --add safe.directory C:/Flutter)
+    [void](flutter config --android-sdk "$HOME\AppData\Local\Android\Sdk")
+    [void](flutter config --android-studio-dir="$HOME\android-studio")
+    Write-Host '    👍 Mise à jour' -ForegroundColor Blue
+    [void](flutter upgrade)
+    Write-Host '    👍 Accepter les licenses.' -ForegroundColor Blue
+    flutter doctor --android-licenses
+    Set-Location $INITIAL_DIR
+    Write-Host '✔️ ✔️ ✔️  Mise en place complétée ✔️ ✔️ ✔️'`n -ForegroundColor Green
+    flutter doctor
 }
 
-if (-Not(Test-Path $HOME\idea\plugins\dart)) {
-    Invoke-Download "plugin Dart" $DART_PLUGIN_URL_IDEA "plugin-dart-idea"
-    Invoke-Install "plugin Dart" "$HOME\idea\plugins" "dart" "plugin-dart-idea"
-}
-else {
-    Write-Host '    ✔️  Le plugin Dart est déjà installé.'  -ForegroundColor Green
-}
+start powershell ${function:Install-Idea} 
+start powershell ${function:Install-Android} 
+start powershell ${function:Update-Flutter} 
 
-Write-Host '🐤  Flutter' -ForegroundColor Blue
 
-[void](git config --global --add safe.directory C:/Flutter)
-[void](flutter config --android-sdk "$HOME\AppData\Local\Android\Sdk")
-[void](flutter config --android-studio-dir="C:\Users\po.brillant\android-studio")
-
-Write-Host '    👍 Mise à jour' -ForegroundColor Blue
-
-[void](flutter upgrade)
-
-Write-Host '    👍 Accepter les licenses.' -ForegroundColor Blue
-
-flutter doctor --android-licenses
-
-Set-Location $INITIAL_DIR
-
-Write-Host '✔️ ✔️ ✔️  Mise en place complétée ✔️ ✔️ ✔️'`n -ForegroundColor Green
-
-flutter doctor
+#Install-Idea
