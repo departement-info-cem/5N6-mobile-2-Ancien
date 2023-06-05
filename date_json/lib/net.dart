@@ -1,7 +1,7 @@
 import 'package:date_json/dto.dart';
 import 'package:dio/dio.dart';
 
-var base_url = "https://exercices-web.herokuapp.com/";
+var base_url = "https://4n6.azurewebsites.net/";
 //var base_url = "http://10.0.2.2:8080/";
 
 Future<TrucAvecUneDate> envoiLeDonc(TrucAvecUneDate truc ) async   {
