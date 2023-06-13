@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/dynamique.dart';
+import 'package:image_client/dynamique.dart';
 
 class FixePage extends StatefulWidget {
   const FixePage({Key? key}) : super(key: key);
@@ -37,11 +37,11 @@ class _FixePageState extends State<FixePage> {
                 //TODO Pour utiliser des images de taille fixe, c'est plutôt simple,
                 // il suffit de spécifier au serveur la taille d'image désirée
                 // Soit la taille du contrôle
-                Image.network("https://exercices-web.herokuapp.com/exos/image?width=100", width: 100,),
-                Image.network("https://exercices-web.herokuapp.com/exos/image?width=150", width: 150,),
-                Image.network("https://exercices-web.herokuapp.com/exos/image?width=200", width: 200,),
-                Image.network("https://exercices-web.herokuapp.com/exos/image?width=300", width: 300,),
-                Image.network("https://exercices-web.herokuapp.com/exos/image?width=400", width: 400,),
+                Image.network("https://4n6.azurewebsites.net/exos/image?width=100", width: 100,),
+                Image.network("https://4n6.azurewebsites.net/exos/image?width=150", width: 150,),
+                Image.network("https://4n6.azurewebsites.net/exos/image?width=200", width: 200,),
+                Image.network("https://4n6.azurewebsites.net/exos/image?width=300", width: 300,),
+                Image.network("https://4n6.azurewebsites.net/exos/image?width=400", width: 400,),
               ]),
           ),
         ],

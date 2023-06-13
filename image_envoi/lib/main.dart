@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       "file" : await MultipartFile.fromFile(file.path ,filename: "image.jpg")
     });
     // TODO changer la base de l'url pour l'endroit ou roule ton serveur
-    var url = "https://exercices-web.herokuapp.com/exos/fileasmultipart";
+    var url = "https://4n6.azurewebsites.net/exos/fileasmultipart";
     var response = await Dio().post(url, data: formData);
     print(response.data);
     return "";

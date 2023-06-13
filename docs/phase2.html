@@ -54,7 +54,7 @@
                             </a>.
                         </p>
                         <p>
-                            Vous pourrez utiliser le code du serveur localement ou une version déployée sur votre instance heroku.
+                            Vous pourrez utiliser le code du serveur localement.
                         </p>
                     </div>
                     <div class="col-xs-4 alert">
@@ -95,7 +95,7 @@
                     </p>
                     <ul>
                         <li><span class="label label-success">1 point</span> l'appui sur le bouton donne accès aux photos de l'appareil</li>
-                        <li>on ne peut sélectionner une seule image</li>
+                        <li>on ne peut sélectionner qu'une seule image</li>
                         <li><span class="label label-success">1 point</span> cette image est envoyée au serveur et associée à la tâche avec le service web approprié</li>
                         <li><span class="label label-success">1 point</span> l'image est ajoutée dans l'écran de consultation courant</li>
                         <li><span class="label label-success">1 point</span> s'il y avait une image, on la remplace</li>
@@ -104,6 +104,16 @@
                     <div>
                         ATTENTION SI CETTE ETAPE NE MARCHE PAS, VOUS NE POUVEZ PAS FAIRE LA SUITE.
                     </div>
+                    
+                    <h4>ACCES RESEAU</h4>
+                    <p>
+                        Vous devez charger le détail de la tâche:
+                        <strong>/api/detail/photo/{id}</strong>
+                        <em>GET</em> prend l'id de la tâche et renvoie un
+                        <a href="https://github.com/departement-info-cem/KickMyB-Library/blob/main/src/main/java/org/kickmyb/transfer/TaskDetailPhotoResponse.java">
+                            TaskDetailPhotoResponse
+                        </a>.
+                    </p>
                 </div>
 
 
@@ -119,6 +129,14 @@
                         <li><span class="label label-success">1 point</span> La taille de l'image téléchargé correspond à la taille affichée</li>
                         <li><span class="label label-success">1 point</span> On a un indicateur graphique que les images chargent si ça prend du temps</li>
                     </ul>
+                    <br />
+                    <h4>ACCES RESEAU</h4>
+                    <p>
+                        <strong>/api/home/photo</strong> en <em>GET</em> reçoit une liste de
+                        <a href="https://github.com/departement-info-cem/KickMyB-Library/blob/main/src/main/java/org/kickmyb/transfer/HomeItemPhotoResponse.java">
+                            HomeItemPhotoResponse
+                        </a>.
+                    </p>
                 </div>
                 
 
